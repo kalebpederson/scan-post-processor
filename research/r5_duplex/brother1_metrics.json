@@ -1,0 +1,20 @@
+{
+ "raw": {
+  "region_px": 89563,
+  "mean_dark_over_ink": 33.86274719238281,
+  "area_gt40": 4959,
+  "area_gt10": 18526
+ },
+ "current": {
+  "region_px": 89563,
+  "mean_dark_over_ink": 57.6119384765625,
+  "area_gt40": 9611,
+  "area_gt10": 15113
+ },
+ "new": {
+  "region_px": 89563,
+  "mean_dark_over_ink": 74.7918472290039,
+  "area_gt40": 679,
+  "area_gt10": 967
+ }
+}

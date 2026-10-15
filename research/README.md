@@ -1,0 +1,32 @@
+# research/: index of the studies
+
+The record of how scanpp's defaults were decided: one report per study, the scripts that produced the numbers, small aggregate result/label
+files. No figures are published (see the last section). `samples/`, `research/corpus/` (66 pages
+cut from the private PDFs) and `research/scans/` are inputs and stay local and ignored. Order is chronological; each later study uses the
+earlier decisions.
+
+| study | question | decided | key numbers |
+|---|---|---|---|
+| [R1 resolution](r1_resolution/REPORT.md) | Output ppi vs legibility, and does scanner JPEG quality matter? | **200 ppi** default (150 is the floor; 300 scans downsampled are as good as direct low-dpi scans; q75 JPEG input is harmless) | light-halftone small text, word recall 0.87 @150, 0.91 @200, 0.92 @250, 0.91 @300; handwriting is fine at 150; 388 reference words (Epson 600/1200 dpi consensus), 22 corpus pages / 1795 words |
+| [R2 cleaning](r2_cleaning/REPORT.md) | Paper white, ink black, colour and faint content kept, bleed-through gone | `clean_page`: flat-field background division, hysteresis soft ink gate with sharpness bonus and page noise floor, hue-preserving faint-ink boost; `paper="flatten"` default, `"keep"` optional | paper whiteness 1.000 (also on pink / blue-grey / yellow paper, baseline 0.000-0.85); faint-content retention 0.85 vs 0.66 for the old ImageMagick levels; bleed-only survival 0.016 vs 0.098; 18 verified duplex sheets (35 bleed instances) as ground truth |
+| [R3 encoding](r3_encoding/REPORT.md), rounds 1-2 | How to store a cleaned page (JPEG / palette / MRC mask+colour layer / stencils), per page | Round 1 picked a 75 ppi 4:2:0 colour layer; **round 2 withdrew it** (it changed colour coding of ~11 % of stroke components). Final per-page rule: blank -> empty page; no colour -> 300 ppi JBIG2 mask + 100 ppi gray layer (E3); highlighter or ink-heavy -> JPEG 150 ppi q55 4:4:4 (E1); else 300 ppi JBIG2 mask + 100 ppi q40 4:4:4 colour layer (E3x) | 102 KB/page mean (12.6 MB per 124 pages vs 61 MB for the old command), colour identity changed 0.31 %, SSIM 0.966, OCR 0.961, Epson tiny-text 0.83; 17 configs x 5 pages checked in poppler, MuPDF, Ghostscript, PDFium, pdf.js |
+| [R4 geometry](r4_geometry/REPORT.md) | Deskew, blank-page drop, scanner edge artefacts, on all 1969 sample pages | four-estimator skew vote (>= 3 of 4 within 0.3 deg), rotate only above 0.25 deg, 5 deg search range; blank score threshold 40 (later lowered to 15 after live scans, see brother_live); coil / dark-strip painting up to 0.35 in | reliable skew on 92.5 % of pages, p50 0.10 deg, p90 0.46 deg, max 3.04 deg; 247 blank pages (12.5 %, nearly all duplex backs), 0 false, 0 missed, 5.8x margin; spiral coil on 34.5 % of pages; strips > 2 mm on 6.4 % |
+| [R6 fold creases](r6_fold/REPORT.md) | Remove gray fold creases (mailed letters, folded worksheets) without touching rules, grids or text | single-page detector: full-width, faint, isolated, non-periodic ridge at 1/3, 1/2 or 2/3 page height (+ tri-fold family and duplex-partner tiers); remove only crease pixels in a ±0.017 in band before cleaning; OCR evaluated and rejected | test doc 9/9 relevant creases, 0 false; corpus 0 false detections on 1,946 pages (5 fire: 3 pink creases, 2 booklet edges); darkest crease px < 40 gl 8,219 -> 413; synthetic ink loss mean ~0, worst cases are horizontal strokes on the crease; 0.12 s CPU/page |
+| [brother_live](brother_live/REPORT.md) | The pipeline on a live Brother ADS-2200 duplex scan (22 pages) | mostly pass; open issue: saturated highlighter / marker bleed is kept and amplified, top-edge blotches on coloured paper | 4 blank pages dropped correctly, skew up to 3.08 deg corrected, small print 2.2-3.0 % words lost (2.2 % by the input JPEG alone), 15-20 s for 22 pages at `--jobs 16` |
+| [R5 duplex](r5_duplex/REPORT.md) | Use the other side of a duplex sheet to remove marker bleed-through | chroma-map pair detection (unique NCC peak, two-way agreement, colour source) on every adjacent page pair; pixel rule removing paler, same-hue ink inside the partner's marker footprint, with protection for darker / other-colour / crossing ink | 0 false accepts of 43,685 non-pairs; 138 adjacent pairs accepted corpus-wide; Brother sheet 1 band px > 10 gl 15,113 -> 967 with no note pixel changed; R2 pooled bleed survival 0.0515 -> 0.0228; ~0.24 s CPU per sheet |
+| [acceptance](acceptance/REPORT.md) | Whole-corpus acceptance run (309 PDFs, 1917 pages), twice | first run found a crash on 16/103 image files, re-processing of all-e1 files, lid / coil edge junk, one G4 fallback; final run: no crash, 309/309 second-pass skips byte-identical, edge junk mostly fixed | 275 PDFs processed, 885.6 -> 123.9 MB (x0.14), median 67 KB/page, 247 blank pages dropped; **speed regression found** (corpus +54 %, 124-page file 14.3 -> 25.5 s) and fixed in the "Speed: recover the clean_page / edge regression" change without changing any output (124-page file 15.6 s, clean-stage CPU 189 -> 95 s); **run 3** after duplex: all checks pass, 127 sheets paired, 190 pages cleaned of marker ghosts, no content loss in the reviewed sample, +16 % wall on the 124-page file |
+
+Other files here: `build_corpus.py` (cuts the 66-page corpus out of `samples/`), `survey.py` (per-PDF survey of `samples/`; its output `survey.json` is not published).
+The runtime benches that guard the shipped code (eval_clean, halftone, lostwords, colorid, snap_audit, maxdiff vs the R2 reference) live in `../bench/`.
+
+## What is published and what is not
+
+Published: every REPORT.md, all scripts (`.py`, `.sh`, `.mjs`), and small aggregate result and label files (JSON tables, labels,
+ground-truth results, halftone regions, per-experiment tables).
+
+Not published: no figures, panels or contact sheets. They show private scans (including student work with names), so image paths named in
+the reports refer to files that are not in this repository. The inputs (`samples/`, `corpus/`, `scans/`) are private as well, and the scripts need
+them to re-run; a few intermediate files derived from them (library listings, OCR text of the scans, logs) are also left out.
+Also ignored (see `../.gitignore`): `work/` dirs (rendered PDFs, pickles, logs), `r4_geometry/cache/` (page cache, rebuild with `extract.py`),
+`r3_encoding/pdfjs/node_modules` (`npm install` in that dir), `*.npy`, `*.pkl`, `*.wasm` and the large intermediate dumps
+(`r4_geometry/blank_feats*.json`, `comp_raw.json`, `*_raw*.json`).

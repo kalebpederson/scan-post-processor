@@ -1,0 +1,125 @@
+{
+ "n_instances": 292,
+ "variants": {
+  "default": {
+   "recall": 0.660958904109589,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.548,
+    "p6": 0.726,
+    "p14": 0.685,
+    "p13": 0.685
+   },
+   "by_cls": {
+    "text": 0.5,
+    "colour": 0.587,
+    "faint": 0.89
+   }
+  },
+  "obs_frac_0.3": {
+   "recall": 0.6746575342465754,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.575,
+    "p6": 0.726,
+    "p14": 0.685,
+    "p13": 0.712
+   },
+   "by_cls": {
+    "text": 0.51,
+    "colour": 0.609,
+    "faint": 0.9
+   }
+  },
+  "obs_frac_0.2": {
+   "recall": 0.6986301369863014,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.603,
+    "p6": 0.767,
+    "p14": 0.685,
+    "p13": 0.74
+   },
+   "by_cls": {
+    "text": 0.54,
+    "colour": 0.641,
+    "faint": 0.91
+   }
+  },
+  "cov_base_0.7": {
+   "recall": 0.75,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.63,
+    "p6": 0.781,
+    "p14": 0.795,
+    "p13": 0.795
+   },
+   "by_cls": {
+    "text": 0.72,
+    "colour": 0.62,
+    "faint": 0.9
+   }
+  },
+  "pres_0.65": {
+   "recall": 0.678082191780822,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.589,
+    "p6": 0.74,
+    "p14": 0.699,
+    "p13": 0.685
+   },
+   "by_cls": {
+    "text": 0.51,
+    "colour": 0.598,
+    "faint": 0.92
+   }
+  },
+  "cont_0.45": {
+   "recall": 0.660958904109589,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.548,
+    "p6": 0.726,
+    "p14": 0.685,
+    "p13": 0.685
+   },
+   "by_cls": {
+    "text": 0.5,
+    "colour": 0.587,
+    "faint": 0.89
+   }
+  },
+  "amp_0.015": {
+   "recall": 0.6678082191780822,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.575,
+    "p6": 0.726,
+    "p14": 0.685,
+    "p13": 0.685
+   },
+   "by_cls": {
+    "text": 0.51,
+    "colour": 0.598,
+    "faint": 0.89
+   }
+  },
+  "loose": {
+   "recall": 0.7773972602739726,
+   "other_detections": 0,
+   "by_strip": {
+    "p4": 0.712,
+    "p6": 0.808,
+    "p14": 0.781,
+    "p13": 0.808
+   },
+   "by_cls": {
+    "text": 0.72,
+    "colour": 0.674,
+    "faint": 0.93
+   }
+  }
+ }
+}

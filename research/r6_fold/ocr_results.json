@@ -1,0 +1,87 @@
+{
+ "class_behaviour": {
+  "printed_text": {
+   "ocr150": {
+    "n_words": 155.1429,
+    "n_conf60": 131.2857,
+    "mean_conf": 84.6974,
+    "ink_in_conf60": 0.4592,
+    "ink_in_conf30": 0.4833,
+    "cpu": 0.5248,
+    "ink_in_conf60_min": 0.036
+   },
+   "ocr200": {
+    "n_words": 153.8571,
+    "n_conf60": 131.8571,
+    "mean_conf": 74.5618,
+    "ink_in_conf60": 0.446,
+    "ink_in_conf30": 0.4668,
+    "cpu": 0.5436,
+    "ink_in_conf60_min": 0.0
+   },
+   "n_pages": 7
+  },
+  "handwriting_colour": {
+   "ocr150": {
+    "n_words": 174.2857,
+    "n_conf60": 100.8571,
+    "mean_conf": 61.252,
+    "ink_in_conf60": 0.2215,
+    "ink_in_conf30": 0.2975,
+    "cpu": 0.5672,
+    "ink_in_conf60_min": 0.0588
+   },
+   "ocr200": {
+    "n_words": 169.1429,
+    "n_conf60": 96.1429,
+    "mean_conf": 62.5158,
+    "ink_in_conf60": 0.1993,
+    "ink_in_conf30": 0.2782,
+    "cpu": 0.5536,
+    "ink_in_conf60_min": 0.0427
+   },
+   "n_pages": 7
+  },
+  "pencil_or_faint": {
+   "ocr150": {
+    "n_words": 4.875,
+    "n_conf60": 2.75,
+    "mean_conf": 8.1907,
+    "ink_in_conf60": 0.043,
+    "ink_in_conf30": 0.0772,
+    "cpu": 0.1267,
+    "ink_in_conf60_min": 0.0
+   },
+   "ocr200": {
+    "n_words": 3.625,
+    "n_conf60": 2.375,
+    "mean_conf": 8.2261,
+    "ink_in_conf60": 0.0262,
+    "ink_in_conf30": 0.04,
+    "cpu": 0.1697,
+    "ink_in_conf60_min": 0.0
+   },
+   "n_pages": 8
+  }
+ },
+ "corpus_candidate_lines": {
+  "n_lines": 200,
+  "n_pages": 157,
+  "cov60_mean": 0.04948400032224371,
+  "cov60_median": 0.010306242638398116,
+  "cov0_mean": 0.18813929261950796,
+  "frac_lines_cov60_gt_0_2": 0.03,
+  "cpu_per_page": 0.41153750955414015
+ },
+ "test_document_fold_cov60": {
+  "p13@0.339": 0.0,
+  "p13@0.681": 0.255,
+  "p9@0.337": 0.171,
+  "p9@0.678": 0.131,
+  "p11@0.338": 0.0,
+  "p11@0.68": 0.224,
+  "p4@0.502": 0.0,
+  "p6@0.5": 0.0,
+  "p14@0.336": 0.0
+ }
+}

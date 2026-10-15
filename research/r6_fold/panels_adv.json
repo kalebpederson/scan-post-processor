@@ -1,0 +1,26 @@
+{
+ "ruled_college": {
+  "detected": 0,
+  "changed_px": 0
+ },
+ "hairline_215_1": {
+  "detected": 1,
+  "changed_px": 4
+ },
+ "hairline_190_3": {
+  "detected": 1,
+  "changed_px": 6811
+ },
+ "dashed_full": {
+  "detected": 0,
+  "changed_px": 0
+ },
+ "pencil_short": {
+  "detected": 0,
+  "changed_px": 0
+ },
+ "highlighter_band": {
+  "detected": 0,
+  "changed_px": 0
+ }
+}

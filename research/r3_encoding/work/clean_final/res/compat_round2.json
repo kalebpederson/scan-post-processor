@@ -1,0 +1,3972 @@
+[
+ {
+  "cfg": "E3x_c100_q40_444_mean",
+  "page": "single13",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9704964405130129
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9722259328274989
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9722610718629322
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9722573053058685
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9719595182340879
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    2.0863866063503878,
+    161.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.0749144644544337,
+    161.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    2.0751881304816715,
+    161.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.168113374562182,
+    160.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.10358282990236779,
+    32.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.10240943014477816,
+    32.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.20138872982697245,
+    48.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.0011733997575896393,
+    0.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.30426830723127285,
+    58.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.3031009915919871,
+    58.0
+   ]
+  ],
+  "max_mean_diff": 2.168113374562182,
+  "max_p999": 161.0
+ },
+ {
+  "cfg": "E3x_c100_q40_444_mean",
+  "page": "pair09_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9634751800612983
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9660224382092162
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9660095678113345
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9660123462731475
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9658276988398653
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    2.106729989215602,
+    158.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.1002900096391524,
+    158.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    2.100439368778691,
+    158.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.199158602227503,
+    158.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.026659771332588924,
+    5.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.02593313673280461,
+    5.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.21415177847128775,
+    41.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.000726634599784312,
+    0.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.240624373693704,
+    44.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.23989857416898103,
+    44.0
+   ]
+  ],
+  "max_mean_diff": 2.199158602227503,
+  "max_p999": 158.0
+ },
+ {
+  "cfg": "E3x_c100_q40_444_mean",
+  "page": "pair01_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9629784115940248
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9567139846831199
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9577027404673242
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9599410333976196
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9567237186477308
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    2.621509968248153,
+    143.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.5586583890517187,
+    151.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    3.121259163957074,
+    153.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.621986412919033,
+    143.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.5333209541201075,
+    77.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.781767112413751,
+    132.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.016721955715332477,
+    2.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.2569534684694998,
+    131.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.5466715420254015,
+    77.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.7916395945915002,
+    132.0
+   ]
+  ],
+  "max_mean_diff": 3.121259163957074,
+  "max_p999": 153.0
+ },
+ {
+  "cfg": "E3x_c100_q40_444_mean",
+  "page": "pair07_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9695246016256974
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9740398486747156
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9742392333813142
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.972190546150696
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9740507931911095
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    2.169199754228491,
+    117.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.1793845789827198,
+    122.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    2.816063376801307,
+    134.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.168179244328937,
+    117.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.25654595621908777,
+    57.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.3523630940114184,
+    129.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.004710660339195213,
+    1.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.0980086640181352,
+    129.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.26045494920467727,
+    57.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.3547784717133786,
+    129.0
+   ]
+  ],
+  "max_mean_diff": 2.816063376801307,
+  "max_p999": 134.0
+ },
+ {
+  "cfg": "E3x_c100_q40_444_mean",
+  "page": "single26",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.981705037186054
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9889548994879592
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9889392416638341
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9889371793752962
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.988768011713098
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.3492255275288458,
+    167.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.348031489487598,
+    167.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.3486375153892405,
+    167.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.4491141046563785,
+    167.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.04209923554842958,
+    12.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.035997699964688254,
+    9.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.1685868621219496,
+    29.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.006101535583741327,
+    0.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.21043676811635698,
+    39.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.2043641022704498,
+    38.0
+   ]
+  ],
+  "max_mean_diff": 1.4491141046563785,
+  "max_p999": 167.0
+ },
+ {
+  "cfg": "E3x_c150_q40_444_mean",
+  "page": "single13",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9740240315896264
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9774986449387297
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9765315852906247
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9775124120363547
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9759156832846306
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.6933627041162043,
+    152.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.9337601759861043,
+    155.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.7167203500634658,
+    153.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.8819655996793312,
+    147.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.5692156736431223,
+    33.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.06790114620016988,
+    6.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.6078644983346218,
+    39.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.5634963638445901,
+    32.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.3217415371107357,
+    58.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.6453444565331501,
+    43.0
+   ]
+  ],
+  "max_mean_diff": 1.9337601759861043,
+  "max_p999": 155.0
+ },
+ {
+  "cfg": "E3x_c150_q40_444_mean",
+  "page": "pair09_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9673668123148603
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9715811499696883
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9710414948779896
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.971606571245996
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9699847235881918
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.6873036380641528,
+    149.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.954637171815501,
+    151.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.7123948998387113,
+    150.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.918153338868688,
+    146.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.5976485479237648,
+    31.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.07055334459491702,
+    6.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.6401055534877507,
+    37.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.5874380851490251,
+    29.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.4079119783166795,
+    60.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.6796383647798742,
+    41.0
+   ]
+  ],
+  "max_mean_diff": 1.954637171815501,
+  "max_p999": 151.0
+ },
+ {
+  "cfg": "E3x_c150_q40_444_mean",
+  "page": "pair01_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9692494744113782
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9683137563871838
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9664000090550937
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.969018371442519
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9664065935977435
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.9301690728613299,
+    139.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.264260185778836,
+    138.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    2.796157649638212,
+    142.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.265234064923368,
+    138.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.8466176125435061,
+    29.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.3001859028668254,
+    117.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.8486245239131098,
+    30.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.7108831173291812,
+    117.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.016115398119313673,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.7124574717973378,
+    117.0
+   ]
+  ],
+  "max_mean_diff": 2.796157649638212,
+  "max_p999": 142.0
+ },
+ {
+  "cfg": "E3x_c150_q40_444_mean",
+  "page": "pair07_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9735219103928384
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9802695630699146
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.981216727329099
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9772687893662373
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9812233547347522
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.7384423705883252,
+    102.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.957428148088783,
+    102.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    2.5230776918467974,
+    119.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.9561992905446663,
+    102.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.7261413920818831,
+    27.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.1172504694083165,
+    114.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.7260477727911094,
+    27.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.507073682794468,
+    112.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.00462061885571228,
+    1.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.5064393375618246,
+    112.0
+   ]
+  ],
+  "max_mean_diff": 2.5230776918467974,
+  "max_p999": 119.0
+ },
+ {
+  "cfg": "E3x_c150_q40_444_mean",
+  "page": "single26",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9831199115894123
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9906977330754994
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9904503681374279
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9906967325345772
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.990256792293755
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.1580107557667898,
+    161.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.2931125394871208,
+    164.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.1685838797110164,
+    162.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.3238516524942499,
+    159.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.28603062578139166,
+    32.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.03400580735056928,
+    4.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.36704483637300656,
+    34.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.2810884129756349,
+    31.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.25914526488580947,
+    48.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.38512671667573317,
+    37.0
+   ]
+  ],
+  "max_mean_diff": 1.3238516524942499,
+  "max_p999": 164.0
+ },
+ {
+  "cfg": "E5a_q40_444_t3",
+  "page": "single13",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9663956114686765
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9681955057810749
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9591150515086034
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9681223060983816
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9592401017770037
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.7345679321632739,
+    28.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.5578627088880617,
+    70.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.7261858065870721,
+    30.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.562808977772688,
+    70.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.5569391158702437,
+    57.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.2302783901661561,
+    10.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.5598252545785973,
+    57.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.502562487473874,
+    58.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03632051612410647,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.5063401284584037,
+    58.0
+   ]
+  ],
+  "max_mean_diff": 1.562808977772688,
+  "max_p999": 70.0
+ },
+ {
+  "cfg": "E5a_q40_444_t3",
+  "page": "pair09_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9591480921794764
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9609035767981243
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9528163039929957
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9608721208829163
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.952966469103199
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.7978130577108445,
+    24.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.6934422748399043,
+    61.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.8118103472957884,
+    27.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.7005488829081608,
+    61.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.6794829215220317,
+    50.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.18984465217930732,
+    9.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.6849880942155544,
+    50.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.636179149845869,
+    47.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03820182094081943,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.641686947061013,
+    47.0
+   ]
+  ],
+  "max_mean_diff": 1.7005488829081608,
+  "max_p999": 61.0
+ },
+ {
+  "cfg": "E5a_q40_444_t3",
+  "page": "pair01_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9648038085247777
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9673104623028356
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9530206905246941
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9627178807029473
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9531685570644178
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.9091909575929658,
+    25.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.9516908955776393,
+    53.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.6122007521982047,
+    77.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.9569772251099102,
+    53.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.923150965340111,
+    38.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.2855277456570189,
+    77.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.927241949456555,
+    38.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.2791691472797218,
+    87.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03477270905843561,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.2841661514624167,
+    87.0
+   ]
+  ],
+  "max_mean_diff": 2.2841661514624167,
+  "max_p999": 87.0
+ },
+ {
+  "cfg": "E5a_q40_444_t3",
+  "page": "pair07_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9732738913811406
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9764257896441921
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9611374160554209
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9707070372675617
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9612977573153522
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.8825435681519814,
+    25.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.9478123139540209,
+    51.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.4333664399767967,
+    36.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.9495244140028698,
+    51.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.9146368573304025,
+    38.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.0742705089454723,
+    48.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.9159835439946267,
+    38.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.2180082012883924,
+    76.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.013385173375770899,
+    1.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.2194660384991147,
+    76.0
+   ]
+  ],
+  "max_mean_diff": 2.2194660384991147,
+  "max_p999": 76.0
+ },
+ {
+  "cfg": "E5a_q40_444_t3",
+  "page": "single26",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9774167995887935
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9783146971321462
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9733892747646644
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9783634527153982
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9735698888582508
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.47077249215029443,
+    32.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.1710858838911635,
+    81.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.5155452801557534,
+    34.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.1734557076187477,
+    81.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.1558541147727164,
+    67.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.1589669167119993,
+    11.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.1548669367538007,
+    67.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.1243115402601618,
+    63.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.052422552752884585,
+    3.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.1257518061480611,
+    63.0
+   ]
+  ],
+  "max_mean_diff": 1.1734557076187477,
+  "max_p999": 81.0
+ },
+ {
+  "cfg": "E5b_q40_444_t3",
+  "page": "single13",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9648423902395928
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9655104794944701
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9617439433244221
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9656540664063198
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9618232177381812
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.4164762695526861,
+    20.0
+   ],
+   [
+    "poppler",
+    "gs",
+    0.9107660262833911,
+    58.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.4342486948969756,
+    24.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    0.9187804802397381,
+    58.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.9206220593428198,
+    51.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.16690299290901978,
+    9.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.9275420877830904,
+    51.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.8720187820310934,
+    48.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03530613851747932,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.8797231845468166,
+    48.0
+   ]
+  ],
+  "max_mean_diff": 0.9275420877830904,
+  "max_p999": 58.0
+ },
+ {
+  "cfg": "E5b_q40_444_t3",
+  "page": "pair09_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.957633345910656
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9589828149021743
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9529482581550422
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.959072339875644
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9530747948557814
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.6816900249090961,
+    21.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.4552310294805355,
+    56.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.6875589324400416,
+    23.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.463251328962312,
+    56.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.4346585974556456,
+    45.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.15374793617163418,
+    7.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.4414303404243136,
+    45.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.3980972218245675,
+    43.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03739036657409263,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.4048634771571182,
+    43.0
+   ]
+  ],
+  "max_mean_diff": 1.463251328962312,
+  "max_p999": 56.0
+ },
+ {
+  "cfg": "E5b_q40_444_t3",
+  "page": "pair01_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9627898488886244
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.96481036794354
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9516161142091109
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.960962548559393
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9517648145251818
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.8216588288834952,
+    24.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.853732082341088,
+    52.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.5757421803443854,
+    107.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.8594366575456434,
+    52.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.8080050814404347,
+    38.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.2893428808313487,
+    107.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.8125075133953106,
+    38.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.222609738505221,
+    107.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03481647756762533,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.228003998557428,
+    107.0
+   ]
+  ],
+  "max_mean_diff": 2.228003998557428,
+  "max_p999": 107.0
+ },
+ {
+  "cfg": "E5b_q40_444_t3",
+  "page": "pair07_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9718369978081826
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.974838856586625
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9603203897837335
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9694304624554592
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.960477832678769
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.8399582398333028,
+    24.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.8676016908240214,
+    50.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.4527507613573916,
+    35.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.8695495683733285,
+    50.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.8374024928253039,
+    36.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.0717209634701106,
+    47.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.8389469129724614,
+    36.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.1854538520104416,
+    78.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.013457087302314222,
+    1.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.1870976159400377,
+    78.0
+   ]
+  ],
+  "max_mean_diff": 2.1870976159400377,
+  "max_p999": 78.0
+ },
+ {
+  "cfg": "E5b_q40_444_t3",
+  "page": "single26",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9816942281431619
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9821665617569113
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9795887103951328
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9822127839645158
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9796528503160502
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.2994526679455245,
+    24.0
+   ],
+   [
+    "poppler",
+    "gs",
+    0.7630359988929291,
+    69.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.3427927057386358,
+    29.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    0.7659487407068075,
+    69.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    0.7496549947032382,
+    59.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.12046971779234784,
+    11.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    0.7517396999456009,
+    59.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    0.7258696710281444,
+    53.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.018616209045533065,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    0.7280599536175452,
+    53.0
+   ]
+  ],
+  "max_mean_diff": 0.7659487407068075,
+  "max_p999": 69.0
+ },
+ {
+  "cfg": "E5a_q40_444",
+  "page": "single13",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9628156391145897
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9644693462665966
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9560986479824408
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9644252858726702
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9562213565412847
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.6931955698075033,
+    27.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.4604141017932641,
+    68.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.6813701911606111,
+    29.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.4652326041935084,
+    68.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.4708599364388582,
+    56.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.2268489754821962,
+    10.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.473677002509997,
+    56.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.4115577967379582,
+    56.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03544917494583942,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.4152363023830656,
+    56.0
+   ]
+  ],
+  "max_mean_diff": 1.473677002509997,
+  "max_p999": 68.0
+ },
+ {
+  "cfg": "E5a_q40_444",
+  "page": "pair09_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9565868465354336
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9582756231507902
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9504936730201754
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9582567852069402
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9506433513634123
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.7768674664299825,
+    23.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.6500532062110498,
+    59.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.7856294318626469,
+    26.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.6570463633674044,
+    60.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.638801046945534,
+    49.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.18683217854381998,
+    9.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.6441998072169572,
+    49.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.5927379486739008,
+    46.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03766260104408242,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.598134561609452,
+    46.0
+   ]
+  ],
+  "max_mean_diff": 1.6570463633674044,
+  "max_p999": 60.0
+ },
+ {
+  "cfg": "E5a_q40_444",
+  "page": "pair01_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9607239654162463
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9631325467340416
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9490974460647751
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.958570383000659
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9492457099925274
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.8815401124671796,
+    25.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.907234135525432,
+    52.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.5724386716126275,
+    78.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.912386178024058,
+    52.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.8837636004381144,
+    38.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.268662319869329,
+    76.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.88772804943671,
+    38.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.2296729263983024,
+    88.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.03424903733131831,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.2345373131907555,
+    88.0
+   ]
+  ],
+  "max_mean_diff": 2.2345373131907555,
+  "max_p999": 88.0
+ },
+ {
+  "cfg": "E5a_q40_444",
+  "page": "pair07_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9726099243236113
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9757345641134249
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9605666361306594
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9700643688177686
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9607268759639651
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.8737191449899249,
+    24.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.9286176163598339,
+    51.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.4462349779797887,
+    36.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.930324230437504,
+    51.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.8978228327074556,
+    37.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.0833683958447824,
+    50.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.8991645104414727,
+    37.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.2186829757434205,
+    80.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.01332959810252183,
+    1.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.220130675833486,
+    80.0
+   ]
+  ],
+  "max_mean_diff": 2.220130675833486,
+  "max_p999": 80.0
+ },
+ {
+  "cfg": "E5a_q40_444",
+  "page": "single26",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9766897154978749
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9775386454675106
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.972946777359576
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9775945913693327
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.973134239339583
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [
+   "pikepdf is missing some specialized decoders (probably jbig2dec) so not all stream contents can be tested."
+  ],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.45579661388992276,
+    31.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.126810681325813,
+    79.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.4993525782346036,
+    33.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.1292999207871657,
+    79.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.1160895105028583,
+    66.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.15669431958084004,
+    11.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.115489688015957,
+    65.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.0838114734541568,
+    62.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.048765520466496785,
+    3.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.0853594640249664,
+    61.0
+   ]
+  ],
+  "max_mean_diff": 1.1292999207871657,
+  "max_p999": 79.0
+ },
+ {
+  "cfg": "E1_j150_q55_444",
+  "page": "single13",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9752756610338954
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9774361493661071
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9675410545597889
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9776146908296053
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9676780947408987
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.9426569463929529,
+    31.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.1078477968333953,
+    76.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.9773856901537492,
+    33.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.115195264408624,
+    76.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    2.0228489659384814,
+    61.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.23140729235262117,
+    11.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    2.0270409234498623,
+    60.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.012857054236932,
+    62.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.04698132294977143,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.0181188621982993,
+    62.0
+   ]
+  ],
+  "max_mean_diff": 2.115195264408624,
+  "max_p999": 76.0
+ },
+ {
+  "cfg": "E1_j150_q55_444",
+  "page": "pair09_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9669803217418051
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9690703196062217
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9612325501898262
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9692453447514701
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9613865496560785
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.8740439583512278,
+    26.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.9213484553497295,
+    66.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.9287225260304827,
+    30.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.9299079747282428,
+    66.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.8644884330174363,
+    53.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.19805845048243478,
+    11.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.8710823049980436,
+    53.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.840208267720293,
+    50.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.045098109390061175,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.8467807856386176,
+    50.0
+   ]
+  ],
+  "max_mean_diff": 1.9299079747282428,
+  "max_p999": 66.0
+ },
+ {
+  "cfg": "E1_j150_q55_444",
+  "page": "pair01_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9820063239323137
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9849829541690615
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9698854133470822
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9795509165662386
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9700002715197593
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.9902873265479025,
+    28.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.1579674667597852,
+    57.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.6292100058389816,
+    34.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.16503196651554,
+    56.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    2.0730565589317336,
+    40.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.2209111148638334,
+    42.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    2.078753859261464,
+    40.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.3490752083714965,
+    74.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.040726895951639495,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.355215679764304,
+    74.0
+   ]
+  ],
+  "max_mean_diff": 2.355215679764304,
+  "max_p999": 74.0
+ },
+ {
+  "cfg": "E1_j150_q55_444",
+  "page": "pair07_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9758558300651502
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9789449063403298
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9644006003698495
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9732352975379707
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9645587375488388
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.9103577998107102,
+    25.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.01827150405294,
+    53.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.403920489673017,
+    32.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.0205630896226414,
+    53.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.976968819647982,
+    39.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.04818996343958,
+    41.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.9782822327044025,
+    39.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.2365648565824023,
+    67.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.015115997282774622,
+    1.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.2379619903294254,
+    67.0
+   ]
+  ],
+  "max_mean_diff": 2.2379619903294254,
+  "max_p999": 67.0
+ },
+ {
+  "cfg": "E1_j150_q55_444",
+  "page": "single26",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9779342884524637
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9788297473660611
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9742002237653614
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9789086379884024
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9743231888892153
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.5726870806730228,
+    36.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.4463275784731964,
+    86.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.6318704011223408,
+    37.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.4485806109886334,
+    86.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.408724387054905,
+    72.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.1694837327378055,
+    12.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.4057243202489,
+    71.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.3877567259331367,
+    68.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.07821527757895039,
+    10.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.3888133344785791,
+    68.0
+   ]
+  ],
+  "max_mean_diff": 1.4485806109886334,
+  "max_p999": 86.0
+ },
+ {
+  "cfg": "E1_j200_q55_444",
+  "page": "single13",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9817012664271315
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9858023611173681
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9779636613438992
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9861080469969516
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9780898857485127
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.9554611523081474,
+    41.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.824374290186198,
+    74.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.1467995151792787,
+    48.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.7669117015489448,
+    69.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.5965664099407335,
+    57.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.2686603487273456,
+    10.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.5964870778099083,
+    56.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.6380901594754773,
+    59.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.09998270201658697,
+    13.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.6453513757265152,
+    59.0
+   ]
+  ],
+  "max_mean_diff": 1.824374290186198,
+  "max_p999": 74.0
+ },
+ {
+  "cfg": "E1_j200_q55_444",
+  "page": "pair09_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9737295418115068
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9780937671072111
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9712560143065713
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.97840555308176
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9712692942799841
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.9038320401599527,
+    40.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.6882852091505138,
+    68.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    1.082618509080845,
+    48.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.6509973182160889,
+    65.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.5004763506742635,
+    48.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.27285839035703036,
+    10.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.5039693503593208,
+    48.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.552072179116443,
+    52.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.08958601750317328,
+    13.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.5602198871932889,
+    52.0
+   ]
+  ],
+  "max_mean_diff": 1.6882852091505138,
+  "max_p999": 68.0
+ },
+ {
+  "cfg": "E1_j200_q55_444",
+  "page": "pair01_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9848155195942603
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9899815528662899
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9824046360553619
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9845272286667668
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9824829480204776
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.2398544118657264,
+    38.0
+   ],
+   [
+    "poppler",
+    "gs",
+    2.141176697884228,
+    66.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    2.378790806084753,
+    51.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    2.147859803382793,
+    66.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.6390172526637967,
+    42.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.3185926480353545,
+    44.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.6472037527859194,
+    42.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.164524037140502,
+    72.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.04067752221102766,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.1720653393478657,
+    72.0
+   ]
+  ],
+  "max_mean_diff": 2.378790806084753,
+  "max_p999": 72.0
+ },
+ {
+  "cfg": "E1_j200_q55_444",
+  "page": "pair07_front",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9803937081372779
+   },
+   "mupdf": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9861890227883275
+   },
+   "gs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9786388910813747
+   },
+   "pdfium": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9804444204374327
+   },
+   "pdfjs": {
+    "shape": [
+     3296,
+     2544,
+     3
+    ],
+    "ssim": 0.9787569560028697
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    1.0455162680512304,
+    32.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.8629121395478414,
+    61.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    2.0374591652927885,
+    46.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.8650659795368505,
+    61.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.5346524947334677,
+    41.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    1.178140336867253,
+    42.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.5373032921551566,
+    42.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    2.0585777691274347,
+    69.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.013914092553581243,
+    1.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    2.059998277882091,
+    69.0
+   ]
+  ],
+  "max_mean_diff": 2.059998277882091,
+  "max_p999": 69.0
+ },
+ {
+  "cfg": "E1_j200_q55_444",
+  "page": "single26",
+  "engines": {
+   "poppler": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9831645972068132
+   },
+   "mupdf": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9857014016865973
+   },
+   "gs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9819499167748208
+   },
+   "pdfium": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9858637736487867
+   },
+   "pdfjs": {
+    "shape": [
+     3295,
+     2544,
+     3
+    ],
+    "ssim": 0.9820899996979905
+   }
+  },
+  "pikepdf_check": "ok",
+  "pikepdf_warn": [],
+  "pairs": [
+   [
+    "poppler",
+    "mupdf",
+    0.6724156812780943,
+    45.0
+   ],
+   [
+    "poppler",
+    "gs",
+    1.1957320506580391,
+    79.0
+   ],
+   [
+    "poppler",
+    "pdfium",
+    0.8022087735371871,
+    53.0
+   ],
+   [
+    "poppler",
+    "pdfjs",
+    1.1922111356066463,
+    78.0
+   ],
+   [
+    "mupdf",
+    "gs",
+    1.0971300856071233,
+    65.0
+   ],
+   [
+    "mupdf",
+    "pdfium",
+    0.1791691718918506,
+    11.0
+   ],
+   [
+    "mupdf",
+    "pdfjs",
+    1.0995523997671333,
+    65.0
+   ],
+   [
+    "gs",
+    "pdfium",
+    1.1353051841459807,
+    69.0
+   ],
+   [
+    "gs",
+    "pdfjs",
+    0.02597894656473979,
+    2.0
+   ],
+   [
+    "pdfium",
+    "pdfjs",
+    1.1381116328341971,
+    69.0
+   ]
+  ],
+  "max_mean_diff": 1.1957320506580391,
+  "max_p999": 79.0
+ }
+]

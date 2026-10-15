@@ -1,0 +1,747 @@
+{
+ "params": {
+  "work_dpi": 100.0,
+  "ang_max": 3.0,
+  "ang_step": 0.25,
+  "strong": 0.5,
+  "strong_dil_in": 0.02,
+  "chroma_d": 0.3,
+  "chroma_ratio": 0.4,
+  "cont_t": 0.01,
+  "cap": 0.3,
+  "fast": true,
+  "sub_win_px": 12.0,
+  "x_margin": 0.03,
+  "cand_min": 0.2,
+  "sep_in": 0.15,
+  "n_cand": 30,
+  "win_in": 0.25,
+  "cov_base": 0.85,
+  "cov_obs": 0.5,
+  "z_min": 4.0,
+  "rel_pres": 0.35,
+  "pres_frac_min": 0.75,
+  "obs_win_min": 6,
+  "obs_frac_min": 0.4,
+  "cont_min": 0.55,
+  "crowd_in": 0.1,
+  "crowd_score": 0.8,
+  "rule_dark": 0.55,
+  "rule_iso_d": 0.3,
+  "rule_frac_max": 0.25,
+  "use_edge": true,
+  "edge_rel_min": 0.3,
+  "step_ratio": 1.0,
+  "amp_min": 0.02,
+  "amp_max": 0.14,
+  "cv_mean_min": 0.75,
+  "margin_frac": 0.02,
+  "min_page_in": [
+   5.0,
+   7.0
+  ],
+  "prior_pos": [
+   0.3333333333333333,
+   0.5,
+   0.6666666666666666
+  ],
+  "prior_tol": 0.02,
+  "pair_score_min": 0.6,
+  "pair_partner_min": 0.8,
+  "pair_tol": 0.015,
+  "family_score_min": 0.6,
+  "family_spacing": 0.3333333333333333,
+  "family_tol": 0.015,
+  "traj_half_in": 0.07,
+  "traj_block_in": 0.0133,
+  "traj_step": 2,
+  "band_in": 0.017,
+  "tone_dark": 0.4,
+  "stroke_t": 0.12,
+  "stroke_reach_in": 0.013,
+  "protect_dil_in": 0.0033,
+  "orient_h_min": 0.7,
+  "orient_sigma_in": 0.01,
+  "orient_e0": 0.0001,
+  "protect_chroma": true,
+  "halo_in": 0.008
+ },
+ "corpus": {
+  "pages": 1969,
+  "pages_evaluated": 1951,
+  "small_pages_skipped": 18,
+  "tierA_pages": {
+   "942": [
+    [
+     0.499,
+     0.041,
+     1.33
+    ]
+   ],
+   "943": [
+    [
+     0.497,
+     0.048,
+     1.32
+    ]
+   ],
+   "1042": [
+    [
+     0.51,
+     0.06,
+     1.29
+    ]
+   ],
+   "1901": [
+    [
+     0.498,
+     0.137,
+     1.05
+    ]
+   ],
+   "1902": [
+    [
+     0.494,
+     0.14,
+     1.22
+    ]
+   ]
+  },
+  "tierB_pairs": {
+   "1043-1042": [
+    [
+     0.511,
+     0.98
+    ]
+   ]
+  },
+  "native_check": {
+   "942": {
+    "pdf": "Sec 2 A1 Formative 2.pdf",
+    "page": 48,
+    "dpi": 200.0,
+    "stage1": [
+     [
+      0.499,
+      "A"
+     ]
+    ],
+    "final": [
+     [
+      0.499,
+      "A",
+      0.0,
+      0.041
+     ]
+    ]
+   },
+   "943": {
+    "pdf": "Sec 2 A1 Formative 2.pdf",
+    "page": 49,
+    "dpi": 200.0,
+    "stage1": [
+     [
+      0.497,
+      "A"
+     ]
+    ],
+    "final": [
+     [
+      0.497,
+      "A",
+      0.0,
+      0.048
+     ]
+    ]
+   },
+   "1042": {
+    "pdf": "Sec 2 A3 Formative 2 addendum 1.pdf",
+    "page": 2,
+    "dpi": 200.0,
+    "stage1": [
+     [
+      0.51,
+      "A"
+     ]
+    ],
+    "final": [
+     [
+      0.51,
+      "A",
+      0.0,
+      0.06
+     ]
+    ]
+   },
+   "1043": {
+    "pdf": "Sec 2 A3 Formative 2 addendum 1.pdf",
+    "page": 3,
+    "dpi": 200.0,
+    "stage1": [],
+    "final": []
+   },
+   "1901": {
+    "pdf": "1.1 Handout - Parent Functions and Trans",
+    "page": 4,
+    "dpi": 300.00000000000006,
+    "stage1": [
+     [
+      0.498,
+      "A"
+     ]
+    ],
+    "final": [
+     [
+      0.498,
+      "A",
+      0.0,
+      0.137
+     ]
+    ]
+   },
+   "1902": {
+    "pdf": "1.1 Handout - Parent Functions and Trans",
+    "page": 5,
+    "dpi": 300.00000000000006,
+    "stage1": [
+     [
+      0.494,
+      "A"
+     ]
+    ],
+    "final": [
+     [
+      0.494,
+      "A",
+      0.0,
+      0.14
+     ]
+    ]
+   }
+  },
+  "top_scores_near_prior": [
+   [
+    1.3333333730697632,
+    942,
+    0.499,
+    0.041
+   ],
+   [
+    1.3247311115264893,
+    943,
+    0.497,
+    0.048
+   ],
+   [
+    1.2903225421905518,
+    1042,
+    0.51,
+    0.06
+   ],
+   [
+    1.2235697507858276,
+    1902,
+    0.494,
+    0.14
+   ],
+   [
+    1.0518710613250732,
+    1901,
+    0.498,
+    0.137
+   ],
+   [
+    0.9775484204292297,
+    1043,
+    0.511,
+    0.081
+   ],
+   [
+    0.8888888955116272,
+    852,
+    0.345,
+    0.083
+   ],
+   [
+    0.790123462677002,
+    713,
+    0.66,
+    0.101
+   ],
+   [
+    0.7692307829856873,
+    850,
+    0.345,
+    0.098
+   ],
+   [
+    0.7555555701255798,
+    852,
+    0.504,
+    0.067
+   ],
+   [
+    0.7536231875419617,
+    445,
+    0.495,
+    0.041
+   ],
+   [
+    0.7142857313156128,
+    850,
+    0.331,
+    0.103
+   ],
+   [
+    0.7058823704719543,
+    1905,
+    0.493,
+    0.121
+   ],
+   [
+    0.6666666865348816,
+    1668,
+    0.682,
+    0.022
+   ],
+   [
+    0.6666666865348816,
+    947,
+    0.331,
+    0.044
+   ]
+  ],
+  "top_scores_any_row": [
+   [
+    1.3333333730697632,
+    942,
+    0.499,
+    0.041
+   ],
+   [
+    1.3247311115264893,
+    943,
+    0.497,
+    0.048
+   ],
+   [
+    1.2903225421905518,
+    1042,
+    0.51,
+    0.06
+   ],
+   [
+    1.2586666345596313,
+    1617,
+    0.637,
+    0.035
+   ],
+   [
+    1.2235697507858276,
+    1902,
+    0.494,
+    0.14
+   ],
+   [
+    1.204301118850708,
+    1475,
+    0.039,
+    0.135
+   ],
+   [
+    1.0518710613250732,
+    1901,
+    0.498,
+    0.137
+   ],
+   [
+    0.9777777791023254,
+    1366,
+    0.636,
+    0.023
+   ],
+   [
+    0.9775484204292297,
+    1043,
+    0.511,
+    0.081
+   ],
+   [
+    0.9743589758872986,
+    851,
+    0.194,
+    0.062
+   ],
+   [
+    0.9382715821266174,
+    713,
+    0.581,
+    0.116
+   ],
+   [
+    0.9314686059951782,
+    1747,
+    0.921,
+    0.068
+   ],
+   [
+    0.8888888955116272,
+    852,
+    0.597,
+    0.101
+   ],
+   [
+    0.8888888955116272,
+    852,
+    0.345,
+    0.083
+   ],
+   [
+    0.8615375757217407,
+    1222,
+    0.183,
+    0.03
+   ]
+  ],
+  "lines_score_ge_1_any_row": 7,
+  "lines_score_ge_1_near_prior": 5,
+  "lines_near_prior_score_ge_0.5": 78,
+  "lines_near_prior_score_ge_0.6": 32,
+  "lines_near_prior_score_ge_0.7": 13,
+  "lines_near_prior_score_ge_0.8": 7,
+  "lines_near_prior_score_ge_0.9": 6
+ },
+ "negative_classes": {
+  "rule": {
+   "pages": 313,
+   "tierA_pages": [],
+   "top_near_prior_scores": [
+    [
+     0.55,
+     962
+    ],
+    [
+     0.53,
+     1587
+    ],
+    [
+     0.53,
+     1211
+    ]
+   ]
+  },
+  "table": {
+   "pages": 698,
+   "tierA_pages": [
+    943
+   ],
+   "top_near_prior_scores": [
+    [
+     1.32,
+     943
+    ],
+    [
+     0.98,
+     1043
+    ],
+    [
+     0.67,
+     1668
+    ]
+   ]
+  },
+  "handwriting": {
+   "pages": 648,
+   "tierA_pages": [],
+   "top_near_prior_scores": [
+    [
+     0.79,
+     713
+    ],
+    [
+     0.65,
+     1935
+    ],
+    [
+     0.53,
+     568
+    ]
+   ]
+  },
+  "hstroke": {
+   "pages": 430,
+   "tierA_pages": [],
+   "top_near_prior_scores": [
+    [
+     0.56,
+     1461
+    ],
+    [
+     0.53,
+     1211
+    ],
+    [
+     0.53,
+     568
+    ]
+   ]
+  },
+  "highlighter": {
+   "pages": 111,
+   "tierA_pages": [],
+   "top_near_prior_scores": [
+    [
+     0.53,
+     568
+    ],
+    [
+     0.52,
+     565
+    ],
+    [
+     0.42,
+     635
+    ]
+   ]
+  },
+  "graph": {
+   "pages": 175,
+   "tierA_pages": [
+    1901,
+    1902
+   ],
+   "top_near_prior_scores": [
+    [
+     1.22,
+     1902
+    ],
+    [
+     1.05,
+     1901
+    ],
+    [
+     0.89,
+     852
+    ]
+   ]
+  },
+  "pencil": {
+   "pages": 185,
+   "tierA_pages": [],
+   "top_near_prior_scores": [
+    [
+     0.75,
+     445
+    ],
+    [
+     0.6,
+     97
+    ],
+    [
+     0.42,
+     67
+    ]
+   ]
+  },
+  "dashed": {
+   "pages": 22,
+   "tierA_pages": [
+    1902
+   ],
+   "top_near_prior_scores": [
+    [
+     1.22,
+     1902
+    ],
+    [
+     0.34,
+     1907
+    ],
+    [
+     0.33,
+     1906
+    ]
+   ]
+  },
+  "small": {
+   "pages": 18,
+   "tierA_pages": [],
+   "top_near_prior_scores": [
+    [
+     0.0,
+     1922
+    ],
+    [
+     0.0,
+     1921
+    ],
+    [
+     0.0,
+     1920
+    ]
+   ]
+  }
+ },
+ "test_document": [
+  {
+   "page": 3,
+   "y": 0.5,
+   "relevant": false,
+   "detected": false,
+   "tier": null,
+   "detected_alone": false,
+   "best_score": 0.0,
+   "amp": 0.0
+  },
+  {
+   "page": 4,
+   "y": 0.502,
+   "relevant": true,
+   "detected": true,
+   "tier": "A",
+   "detected_alone": true,
+   "best_score": 1.17,
+   "amp": 0.0313
+  },
+  {
+   "page": 5,
+   "y": 0.5,
+   "relevant": false,
+   "detected": false,
+   "tier": null,
+   "detected_alone": false,
+   "best_score": 0.0,
+   "amp": 0.0
+  },
+  {
+   "page": 6,
+   "y": 0.5,
+   "relevant": true,
+   "detected": true,
+   "tier": "A",
+   "detected_alone": true,
+   "best_score": 1.29,
+   "amp": 0.0253
+  },
+  {
+   "page": 9,
+   "y": 0.337,
+   "relevant": true,
+   "detected": true,
+   "tier": "F",
+   "detected_alone": true,
+   "best_score": 0.85,
+   "amp": 0.0205
+  },
+  {
+   "page": 9,
+   "y": 0.678,
+   "relevant": true,
+   "detected": true,
+   "tier": "A",
+   "detected_alone": true,
+   "best_score": 1.02,
+   "amp": 0.0214
+  },
+  {
+   "page": 10,
+   "y": 0.335,
+   "relevant": false,
+   "detected": false,
+   "tier": null,
+   "detected_alone": false,
+   "best_score": 0.0,
+   "amp": 0.0
+  },
+  {
+   "page": 10,
+   "y": 0.679,
+   "relevant": false,
+   "detected": false,
+   "tier": null,
+   "detected_alone": false,
+   "best_score": 0.0,
+   "amp": 0.0
+  },
+  {
+   "page": 11,
+   "y": 0.338,
+   "relevant": true,
+   "detected": true,
+   "tier": "A",
+   "detected_alone": true,
+   "best_score": 1.17,
+   "amp": 0.0571
+  },
+  {
+   "page": 11,
+   "y": 0.68,
+   "relevant": true,
+   "detected": true,
+   "tier": "F",
+   "detected_alone": true,
+   "best_score": 0.99,
+   "amp": 0.0236
+  },
+  {
+   "page": 12,
+   "y": 0.336,
+   "relevant": false,
+   "detected": false,
+   "tier": null,
+   "detected_alone": false,
+   "best_score": 0.0,
+   "amp": 0.0
+  },
+  {
+   "page": 12,
+   "y": 0.68,
+   "relevant": false,
+   "detected": false,
+   "tier": null,
+   "detected_alone": false,
+   "best_score": 0.0,
+   "amp": 0.0
+  },
+  {
+   "page": 13,
+   "y": 0.339,
+   "relevant": true,
+   "detected": true,
+   "tier": "A",
+   "detected_alone": true,
+   "best_score": 1.33,
+   "amp": 0.127
+  },
+  {
+   "page": 13,
+   "y": 0.681,
+   "relevant": true,
+   "detected": true,
+   "tier": "A",
+   "detected_alone": true,
+   "best_score": 1.21,
+   "amp": 0.0352
+  },
+  {
+   "page": 14,
+   "y": 0.336,
+   "relevant": true,
+   "detected": true,
+   "tier": "A",
+   "detected_alone": true,
+   "best_score": 1.33,
+   "amp": 0.0615
+  },
+  {
+   "page": 14,
+   "y": 0.679,
+   "relevant": false,
+   "detected": false,
+   "tier": null,
+   "detected_alone": false,
+   "best_score": 0.0,
+   "amp": 0.0
+  }
+ ]
+}

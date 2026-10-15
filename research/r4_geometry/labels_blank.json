@@ -1,0 +1,1635 @@
+{
+"note": "keys = index into research/r4_geometry/index.json (global page id). Pages not in this dict (1643 pages with core ink fraction >1.5%) are all content = NOT_BLANK.",
+"labels": {
+"1189": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p64",
+"reason": "no mark / bleed-through / dust only"
+},
+"1301": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p14",
+"reason": "no mark / bleed-through / dust only"
+},
+"1501": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p28",
+"reason": "no mark / bleed-through / dust only"
+},
+"1750": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p46",
+"reason": "no mark / bleed-through / dust only"
+},
+"1762": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p58",
+"reason": "no mark / bleed-through / dust only"
+},
+"1810": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p10",
+"reason": "no mark / bleed-through / dust only"
+},
+"1830": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p30",
+"reason": "no mark / bleed-through / dust only"
+},
+"1850": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p50",
+"reason": "no mark / bleed-through / dust only"
+},
+"1305": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p18",
+"reason": "no mark / bleed-through / dust only"
+},
+"1525": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p52",
+"reason": "no mark / bleed-through / dust only"
+},
+"1838": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p38",
+"reason": "no mark / bleed-through / dust only"
+},
+"1181": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p56",
+"reason": "no mark / bleed-through / dust only"
+},
+"1297": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p10",
+"reason": "no mark / bleed-through / dust only"
+},
+"1169": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p44",
+"reason": "no mark / bleed-through / dust only"
+},
+"1758": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p54",
+"reason": "no mark / bleed-through / dust only"
+},
+"1766": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p62",
+"reason": "no mark / bleed-through / dust only"
+},
+"1794": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p90",
+"reason": "no mark / bleed-through / dust only"
+},
+"1133": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p8",
+"reason": "no mark / bleed-through / dust only"
+},
+"1213": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p88",
+"reason": "no mark / bleed-through / dust only"
+},
+"1217": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p92",
+"reason": "no mark / bleed-through / dust only"
+},
+"1185": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p60",
+"reason": "no mark / bleed-through / dust only"
+},
+"1738": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p34",
+"reason": "no mark / bleed-through / dust only"
+},
+"1161": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p36",
+"reason": "no mark / bleed-through / dust only"
+},
+"1770": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p66",
+"reason": "no mark / bleed-through / dust only"
+},
+"1842": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p42",
+"reason": "no mark / bleed-through / dust only"
+},
+"993": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p22",
+"reason": "no mark / bleed-through / dust only"
+},
+"1329": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p42",
+"reason": "no mark / bleed-through / dust only"
+},
+"1477": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p4",
+"reason": "no mark / bleed-through / dust only"
+},
+"1545": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p72",
+"reason": "no mark / bleed-through / dust only"
+},
+"1573": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p100",
+"reason": "no mark / bleed-through / dust only"
+},
+"1774": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p70",
+"reason": "no mark / bleed-through / dust only"
+},
+"1706": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1854": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p54",
+"reason": "no mark / bleed-through / dust only"
+},
+"1395": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p40",
+"reason": "no mark / bleed-through / dust only"
+},
+"895": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1818": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p18",
+"reason": "no mark / bleed-through / dust only"
+},
+"1387": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p32",
+"reason": "no mark / bleed-through / dust only"
+},
+"1517": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p44",
+"reason": "no mark / bleed-through / dust only"
+},
+"1726": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p22",
+"reason": "no mark / bleed-through / dust only"
+},
+"1137": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p12",
+"reason": "no mark / bleed-through / dust only"
+},
+"1153": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p28",
+"reason": "no mark / bleed-through / dust only"
+},
+"1313": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p26",
+"reason": "no mark / bleed-through / dust only"
+},
+"1489": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p16",
+"reason": "no mark / bleed-through / dust only"
+},
+"1497": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p24",
+"reason": "no mark / bleed-through / dust only"
+},
+"1509": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p36",
+"reason": "no mark / bleed-through / dust only"
+},
+"1638": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p58",
+"reason": "no mark / bleed-through / dust only"
+},
+"1846": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p46",
+"reason": "no mark / bleed-through / dust only"
+},
+"1541": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p68",
+"reason": "no mark / bleed-through / dust only"
+},
+"1730": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p26",
+"reason": "no mark / bleed-through / dust only"
+},
+"1201": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p76",
+"reason": "no mark / bleed-through / dust only"
+},
+"1349": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p62",
+"reason": "no mark / bleed-through / dust only"
+},
+"1549": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p76",
+"reason": "no mark / bleed-through / dust only"
+},
+"989": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p18",
+"reason": "no mark / bleed-through / dust only"
+},
+"1557": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p84",
+"reason": "no mark / bleed-through / dust only"
+},
+"887": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2 addendum 1.pdf p22",
+"reason": "no mark / bleed-through / dust only"
+},
+"1345": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p58",
+"reason": "no mark / bleed-through / dust only"
+},
+"1634": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p54",
+"reason": "no mark / bleed-through / dust only"
+},
+"1173": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p48",
+"reason": "no mark / bleed-through / dust only"
+},
+"1129": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p4",
+"reason": "no mark / bleed-through / dust only"
+},
+"1141": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p16",
+"reason": "no mark / bleed-through / dust only"
+},
+"1325": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p38",
+"reason": "no mark / bleed-through / dust only"
+},
+"1337": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p50",
+"reason": "no mark / bleed-through / dust only"
+},
+"1403": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p48",
+"reason": "no mark / bleed-through / dust only"
+},
+"1013": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p42",
+"reason": "no mark / bleed-through / dust only"
+},
+"1017": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p46",
+"reason": "no mark / bleed-through / dust only"
+},
+"985": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p14",
+"reason": "no mark / bleed-through / dust only"
+},
+"1205": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p80",
+"reason": "no mark / bleed-through / dust only"
+},
+"1353": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p66",
+"reason": "no mark / bleed-through / dust only"
+},
+"1481": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p8",
+"reason": "no mark / bleed-through / dust only"
+},
+"1493": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p20",
+"reason": "no mark / bleed-through / dust only"
+},
+"1569": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p96",
+"reason": "no mark / bleed-through / dust only"
+},
+"1577": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p104",
+"reason": "no mark / bleed-through / dust only"
+},
+"1814": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p14",
+"reason": "no mark / bleed-through / dust only"
+},
+"1485": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p12",
+"reason": "no mark / bleed-through / dust only"
+},
+"1177": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p52",
+"reason": "no mark / bleed-through / dust only"
+},
+"1293": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p6",
+"reason": "no mark / bleed-through / dust only"
+},
+"1537": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p64",
+"reason": "no mark / bleed-through / dust only"
+},
+"981": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p10",
+"reason": "no mark / bleed-through / dust only"
+},
+"1798": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p94",
+"reason": "no mark / bleed-through / dust only"
+},
+"1443": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p88",
+"reason": "no mark / bleed-through / dust only"
+},
+"977": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p6",
+"reason": "no mark / bleed-through / dust only"
+},
+"1341": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p54",
+"reason": "no mark / bleed-through / dust only"
+},
+"1802": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1822": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p22",
+"reason": "no mark / bleed-through / dust only"
+},
+"1718": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p14",
+"reason": "no mark / bleed-through / dust only"
+},
+"1826": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p26",
+"reason": "no mark / bleed-through / dust only"
+},
+"1411": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p56",
+"reason": "no mark / bleed-through / dust only"
+},
+"1658": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p78",
+"reason": "no mark / bleed-through / dust only"
+},
+"1317": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p30",
+"reason": "no mark / bleed-through / dust only"
+},
+"1375": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p20",
+"reason": "no mark / bleed-through / dust only"
+},
+"1521": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p48",
+"reason": "no mark / bleed-through / dust only"
+},
+"973": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1553": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p80",
+"reason": "no mark / bleed-through / dust only"
+},
+"1778": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p74",
+"reason": "no mark / bleed-through / dust only"
+},
+"1165": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p40",
+"reason": "no mark / bleed-through / dust only"
+},
+"1029": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p58",
+"reason": "no mark / bleed-through / dust only"
+},
+"1037": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p66",
+"reason": "no mark / bleed-through / dust only"
+},
+"1157": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p32",
+"reason": "no mark / bleed-through / dust only"
+},
+"1529": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p56",
+"reason": "no mark / bleed-through / dust only"
+},
+"1209": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p84",
+"reason": "no mark / bleed-through / dust only"
+},
+"1505": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p32",
+"reason": "no mark / bleed-through / dust only"
+},
+"1786": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p82",
+"reason": "no mark / bleed-through / dust only"
+},
+"1834": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p34",
+"reason": "no mark / bleed-through / dust only"
+},
+"1021": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p50",
+"reason": "no mark / bleed-through / dust only"
+},
+"1025": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p54",
+"reason": "no mark / bleed-through / dust only"
+},
+"1594": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p14",
+"reason": "no mark / bleed-through / dust only"
+},
+"1630": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p50",
+"reason": "no mark / bleed-through / dust only"
+},
+"1357": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1642": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p62",
+"reason": "no mark / bleed-through / dust only"
+},
+"1714": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p10",
+"reason": "no mark / bleed-through / dust only"
+},
+"1662": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p82",
+"reason": "no mark / bleed-through / dust only"
+},
+"1197": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p72",
+"reason": "no mark / bleed-through / dust only"
+},
+"1045": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1806": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p6",
+"reason": "no mark / bleed-through / dust only"
+},
+"1289": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1533": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p60",
+"reason": "no mark / bleed-through / dust only"
+},
+"1333": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p46",
+"reason": "no mark / bleed-through / dust only"
+},
+"1513": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p40",
+"reason": "no mark / bleed-through / dust only"
+},
+"1001": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p30",
+"reason": "no mark / bleed-through / dust only"
+},
+"1431": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p76",
+"reason": "no mark / bleed-through / dust only"
+},
+"1734": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p30",
+"reason": "no mark / bleed-through / dust only"
+},
+"1598": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p18",
+"reason": "no mark / bleed-through / dust only"
+},
+"1646": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p66",
+"reason": "no mark / bleed-through / dust only"
+},
+"1415": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p60",
+"reason": "no mark / bleed-through / dust only"
+},
+"1670": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p90",
+"reason": "no mark / bleed-through / dust only"
+},
+"1682": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p102",
+"reason": "no mark / bleed-through / dust only"
+},
+"1790": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p86",
+"reason": "no mark / bleed-through / dust only"
+},
+"1005": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p34",
+"reason": "no mark / bleed-through / dust only"
+},
+"1067": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p24",
+"reason": "no mark / bleed-through / dust only"
+},
+"1423": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p68",
+"reason": "no mark / bleed-through / dust only"
+},
+"1447": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p92",
+"reason": "no mark / bleed-through / dust only"
+},
+"1193": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p68",
+"reason": "no mark / bleed-through / dust only"
+},
+"1678": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p98",
+"reason": "no mark / bleed-through / dust only"
+},
+"1309": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p22",
+"reason": "no mark / bleed-through / dust only"
+},
+"1427": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p72",
+"reason": "no mark / bleed-through / dust only"
+},
+"1103": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p60",
+"reason": "no mark / bleed-through / dust only"
+},
+"1561": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p88",
+"reason": "no mark / bleed-through / dust only"
+},
+"1742": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p38",
+"reason": "no mark / bleed-through / dust only"
+},
+"1746": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p42",
+"reason": "no mark / bleed-through / dust only"
+},
+"1439": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p84",
+"reason": "no mark / bleed-through / dust only"
+},
+"1033": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p62",
+"reason": "no mark / bleed-through / dust only"
+},
+"1467": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p112",
+"reason": "no mark / bleed-through / dust only"
+},
+"997": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p26",
+"reason": "no mark / bleed-through / dust only"
+},
+"1145": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p20",
+"reason": "no mark / bleed-through / dust only"
+},
+"1149": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p24",
+"reason": "no mark / bleed-through / dust only"
+},
+"1359": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p4",
+"reason": "no mark / bleed-through / dust only"
+},
+"1379": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p24",
+"reason": "no mark / bleed-through / dust only"
+},
+"1367": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p12",
+"reason": "no mark / bleed-through / dust only"
+},
+"1459": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p104",
+"reason": "no mark / bleed-through / dust only"
+},
+"1754": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p50",
+"reason": "no mark / bleed-through / dust only"
+},
+"1702": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p122",
+"reason": "no mark / bleed-through / dust only"
+},
+"1041": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2 addendum 1.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1565": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p92",
+"reason": "no mark / bleed-through / dust only"
+},
+"1321": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p34",
+"reason": "no mark / bleed-through / dust only"
+},
+"1399": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p44",
+"reason": "no mark / bleed-through / dust only"
+},
+"965": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p72",
+"reason": "no mark / bleed-through / dust only"
+},
+"1363": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p8",
+"reason": "no mark / bleed-through / dust only"
+},
+"1285": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p66",
+"reason": "no mark / bleed-through / dust only"
+},
+"1471": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p116",
+"reason": "no mark / bleed-through / dust only"
+},
+"1451": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p96",
+"reason": "no mark / bleed-through / dust only"
+},
+"1674": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p94",
+"reason": "no mark / bleed-through / dust only"
+},
+"1590": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p10",
+"reason": "no mark / bleed-through / dust only"
+},
+"1614": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p34",
+"reason": "no mark / bleed-through / dust only"
+},
+"1269": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p50",
+"reason": "no mark / bleed-through / dust only"
+},
+"1435": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p80",
+"reason": "no mark / bleed-through / dust only"
+},
+"1686": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p106",
+"reason": "no mark / bleed-through / dust only"
+},
+"1463": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p108",
+"reason": "no mark / bleed-through / dust only"
+},
+"1419": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p64",
+"reason": "no mark / bleed-through / dust only"
+},
+"1225": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p6",
+"reason": "no mark / bleed-through / dust only"
+},
+"1610": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p30",
+"reason": "no mark / bleed-through / dust only"
+},
+"1111": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p68",
+"reason": "no mark / bleed-through / dust only"
+},
+"1091": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p48",
+"reason": "no mark / bleed-through / dust only"
+},
+"1622": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p42",
+"reason": "no mark / bleed-through / dust only"
+},
+"1383": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p28",
+"reason": "no mark / bleed-through / dust only"
+},
+"1606": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p26",
+"reason": "no mark / bleed-through / dust only"
+},
+"1253": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p34",
+"reason": "no mark / bleed-through / dust only"
+},
+"1047": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p4",
+"reason": "no mark / bleed-through / dust only"
+},
+"933": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p40",
+"reason": "no mark / bleed-through / dust only"
+},
+"1626": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p46",
+"reason": "no mark / bleed-through / dust only"
+},
+"905": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p12",
+"reason": "blank: row of dust specks"
+},
+"925": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p32",
+"reason": "blank: row of dust specks + dark strip at right edge"
+},
+"941": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p48",
+"reason": "no mark / bleed-through / dust only"
+},
+"953": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p60",
+"reason": "no mark / bleed-through / dust only"
+},
+"1095": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p52",
+"reason": "no mark / bleed-through / dust only"
+},
+"1261": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p42",
+"reason": "no mark / bleed-through / dust only"
+},
+"1009": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 3.pdf p38",
+"reason": "no mark / bleed-through / dust only"
+},
+"917": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p24",
+"reason": "no mark / bleed-through / dust only"
+},
+"1107": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p64",
+"reason": "no mark / bleed-through / dust only"
+},
+"909": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p16",
+"reason": "no mark / bleed-through / dust only"
+},
+"937": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p44",
+"reason": "no mark / bleed-through / dust only"
+},
+"1602": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p22",
+"reason": "no mark / bleed-through / dust only"
+},
+"1083": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p40",
+"reason": "no mark / bleed-through / dust only"
+},
+"1237": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p18",
+"reason": "no mark / bleed-through / dust only"
+},
+"1782": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p78",
+"reason": "no mark / bleed-through / dust only"
+},
+"879": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2 addendum 1.pdf p14",
+"reason": "blank: dark strip along top edge + dust"
+},
+"1391": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p36",
+"reason": "no mark / bleed-through / dust only"
+},
+"1075": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p32",
+"reason": "no mark / bleed-through / dust only"
+},
+"1690": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p110",
+"reason": "no mark / bleed-through / dust only"
+},
+"1277": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p58",
+"reason": "no mark / bleed-through / dust only"
+},
+"1722": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p18",
+"reason": "no mark / bleed-through / dust only"
+},
+"929": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p36",
+"reason": "no mark / bleed-through / dust only"
+},
+"1115": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p72",
+"reason": "no mark / bleed-through / dust only"
+},
+"1079": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p36",
+"reason": "no mark / bleed-through / dust only"
+},
+"957": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p64",
+"reason": "no mark / bleed-through / dust only"
+},
+"969": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p76",
+"reason": "no mark / bleed-through / dust only"
+},
+"1245": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p26",
+"reason": "no mark / bleed-through / dust only"
+},
+"1698": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p118",
+"reason": "no mark / bleed-through / dust only"
+},
+"897": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p4",
+"reason": "no mark / bleed-through / dust only"
+},
+"875": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2 addendum 1.pdf p10",
+"reason": "blank: dark strip along top edge + dust"
+},
+"945": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p52",
+"reason": "no mark / bleed-through / dust only"
+},
+"1666": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p86",
+"reason": "no mark / bleed-through / dust only"
+},
+"1055": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p12",
+"reason": "no mark / bleed-through / dust only"
+},
+"1241": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p22",
+"reason": "no mark / bleed-through / dust only"
+},
+"1455": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p100",
+"reason": "no mark / bleed-through / dust only"
+},
+"949": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p56",
+"reason": "no mark / bleed-through / dust only"
+},
+"1618": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p38",
+"reason": "no mark / bleed-through / dust only"
+},
+"921": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p28",
+"reason": "no mark / bleed-through / dust only"
+},
+"1265": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p46",
+"reason": "no mark / bleed-through / dust only"
+},
+"1694": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p114",
+"reason": "no mark / bleed-through / dust only"
+},
+"1221": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1233": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p14",
+"reason": "no mark / bleed-through / dust only"
+},
+"1371": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p16",
+"reason": "no mark / bleed-through / dust only"
+},
+"961": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p68",
+"reason": "no mark / bleed-through / dust only"
+},
+"1650": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p70",
+"reason": "no mark / bleed-through / dust only"
+},
+"1257": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p38",
+"reason": "no mark / bleed-through / dust only"
+},
+"1273": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p54",
+"reason": "no mark / bleed-through / dust only"
+},
+"1099": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p56",
+"reason": "no mark / bleed-through / dust only"
+},
+"1710": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p6",
+"reason": "blank: bleed-through scribble only (blurred, low contrast)"
+},
+"1654": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p74",
+"reason": "no mark / bleed-through / dust only"
+},
+"1229": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p10",
+"reason": "no mark / bleed-through / dust only"
+},
+"1582": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p2",
+"reason": "no mark / bleed-through / dust only"
+},
+"1119": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p76",
+"reason": "no mark / bleed-through / dust only"
+},
+"1407": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p52",
+"reason": "no mark / bleed-through / dust only"
+},
+"1249": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p30",
+"reason": "no mark / bleed-through / dust only"
+},
+"883": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2 addendum 1.pdf p18",
+"reason": "blank: top edge strip + dust"
+},
+"913": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p20",
+"reason": "no mark / bleed-through / dust only"
+},
+"1087": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p44",
+"reason": "no mark / bleed-through / dust only"
+},
+"1586": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p6",
+"reason": "no mark / bleed-through / dust only"
+},
+"901": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p8",
+"reason": "no mark / bleed-through / dust only"
+},
+"1063": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p20",
+"reason": "no mark / bleed-through / dust only"
+},
+"1051": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p8",
+"reason": "no mark / bleed-through / dust only"
+},
+"1281": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p62",
+"reason": "no mark / bleed-through / dust only"
+},
+"1123": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p80",
+"reason": "no mark / bleed-through / dust only"
+},
+"1059": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p16",
+"reason": "no mark / bleed-through / dust only"
+},
+"1071": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p28",
+"reason": "no mark / bleed-through / dust only"
+},
+"871": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2 addendum 1.pdf p6",
+"reason": "blank: top edge strip + dust"
+},
+"867": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2 addendum 1.pdf p2",
+"reason": "purple marker \"1A\" at top-left (separator/tracking label)"
+},
+"891": {
+"label": "BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2 addendum 1.pdf p26",
+"reason": "blank: faint smudge, 1 dot, thin vertical dust streak, dark edge strips"
+},
+"894": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A1 Formative 2.pdf p1",
+"reason": "large handwritten marker label \"A1\" only (separator sheet)"
+},
+"1044": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 2.pdf p1",
+"reason": "large handwritten marker label \"A3\" only"
+},
+"1356": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 2.pdf p1",
+"reason": "large handwritten label \"B7\" only"
+},
+"1581": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 2.pdf p1",
+"reason": "large handwritten label \"B8\" only"
+},
+"99": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/7.99 Test - Equations and Circles and Solving Systems.pdf p3",
+"reason": "content (green paper, boxed answer grid with numbers)"
+},
+"1220": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 2.pdf p1",
+"reason": "large handwritten label \"B5\" only"
+},
+"698": {
+"label": "NOT_BLANK",
+"page": "2024-2025/Sec 2 Extended/1.3 Notes - Simplifying Radicals.pdf p4",
+"reason": "content"
+},
+"244": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2 Honors/8.5 Homework - Trig Identities.pdf p2",
+"reason": "content"
+},
+"422": {
+"label": "NOT_BLANK",
+"page": "2023-2024/Secondary Math 2/Semester 1/6 Notes - Sec 2 - Intro to Factoring.pdf p3",
+"reason": "content"
+},
+"537": {
+"label": "NOT_BLANK",
+"page": "2023-2024/Secondary Math 2 Extended/2.1 Notes - Sec 2 Extended - Intro to Factoring.pdf p3",
+"reason": "content"
+},
+"708": {
+"label": "NOT_BLANK",
+"page": "2024-2025/Sec 2 Extended/2.1 Notes - Intro to Factoring.pdf p3",
+"reason": "content"
+},
+"544": {
+"label": "NOT_BLANK",
+"page": "2023-2024/Secondary Math 2 Extended/2.3 Notes - Sec 2 Extended - Factoring when a equals 1.pdf p3",
+"reason": "content"
+},
+"7": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/10.2 Homework - Secondary II - Triangle Theorems and Basic Similarity.pdf p2",
+"reason": "content"
+},
+"429": {
+"label": "NOT_BLANK",
+"page": "2023-2024/Secondary Math 2/Semester 1/9 Notes - Sec 2 - Factoring when a equals 1.pdf p3",
+"reason": "content"
+},
+"1930": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/3.2 Notes - Fundamental Theorem of Algebra and Synthetic Division.pdf p5",
+"reason": "content"
+},
+"215": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2 Honors/7.2 Homework - Triangle Basics and Intro to Similarity.pdf p2",
+"reason": "content"
+},
+"92": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/7.3 Homework - Secondary II - Solving Systems by Substitution.pdf p1",
+"reason": "content"
+},
+"93": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/7.3 Homework - Secondary II - Solving Systems by Substitution.pdf p2",
+"reason": "content"
+},
+"834": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 3-4/2 - Notes - Sec 2 - Factoring when a greater than one.pdf p4",
+"reason": "content"
+},
+"8": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/10.2 Homework - Secondary II - Triangle Theorems and Basic Similarity.pdf p3",
+"reason": "content"
+},
+"1889": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Standard 3 - G.SRT.7 Rubric.pdf p2",
+"reason": "content"
+},
+"1888": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Standard 3 - G.SRT.7 Rubric.pdf p1",
+"reason": "content"
+},
+"15": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/10.3 Homework - Secondary II - Special Similarity.pdf p2",
+"reason": "content"
+},
+"1925": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/3.1 Notes - Long Division.pdf p3",
+"reason": "content (handwritten math)"
+},
+"261": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2 Honors/9.4 Notes - Radians, Tangent Lines and Constructions.pdf p2",
+"reason": "content"
+},
+"25": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/10.98 Unit Review - Similarity.pdf p5",
+"reason": "content"
+},
+"98": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/7.99 Test - Equations and Circles and Solving Systems.pdf p2",
+"reason": "content"
+},
+"1896": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Term 1 - Secondary Math 2 Final Review.pdf p5",
+"reason": "content"
+},
+"778": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/27 - Notes - Sec 2 - Graphing Circles.pdf p3",
+"reason": "content"
+},
+"392": {
+"label": "NOT_BLANK",
+"page": "2023-2024/Secondary Math 2/Semester 1/21 Notes - Sec 2 - Features of Quadratics - Algebraically.pdf p3",
+"reason": "content"
+},
+"1907": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/1.1 Handout - Parent Functions and Transformations Reference Book.pdf p11",
+"reason": "content"
+},
+"1918": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/1.3 Notes - Evaluating and Graphing Piecewise Functions.pdf p5",
+"reason": "content"
+},
+"141": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/9.97 Project - Quadrilateral Social Media Project.pdf p2",
+"reason": "content"
+},
+"1891": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Standard 3 - G.SRT.7 Rubric.pdf p4",
+"reason": "content"
+},
+"3": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/10.1 Homework - Secondary II - Dilations, Segments, and Parallel Lines.pdf p4",
+"reason": "content"
+},
+"142": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/9.97 Project - Quadrilateral Social Media Project.pdf p3",
+"reason": "content"
+},
+"239": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2 Honors/8.3 Notes - Unit Circle.pdf p4",
+"reason": "content"
+},
+"1890": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Standard 3 - G.SRT.7 Rubric.pdf p3",
+"reason": "content"
+},
+"22": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/10.98 Unit Review - Similarity.pdf p2",
+"reason": "content"
+},
+"452": {
+"label": "NOT_BLANK",
+"page": "2023-2024/Secondary Math 2/Semester 2/17 Notes - Sec 2 - Parallel Lines and Triangles.pdf p2",
+"reason": "content"
+},
+"1876": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Review - The Case of Ace - Stations.pdf p3",
+"reason": "content"
+},
+"336": {
+"label": "NOT_BLANK",
+"page": "2022-2023/Secondary 2 Honors/8.99v2 - Right Triangle Trig.pdf p4",
+"reason": "content"
+},
+"334": {
+"label": "NOT_BLANK",
+"page": "2022-2023/Secondary 2 Honors/8.99v2 - Right Triangle Trig.pdf p2",
+"reason": "content"
+},
+"228": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2 Honors/7.98 Review Homework.pdf p3",
+"reason": "content"
+},
+"10": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/10.2 Homework - Secondary II - Triangle Theorems and Basic Similarity.pdf p5",
+"reason": "content"
+},
+"1909": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/1.2 Notes - Transformations and Writing Piecewise Functions.pdf p1",
+"reason": "content"
+},
+"243": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2 Honors/8.5 Homework - Trig Identities.pdf p1",
+"reason": "content"
+},
+"220": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2 Honors/7.3 Homework - Special Similarity and Properties.pdf p2",
+"reason": "content"
+},
+"42": {
+"label": "NOT_BLANK",
+"page": "2021-2022/Secondary 2/3.4 - Notes - Secondary II.pdf p2",
+"reason": "content"
+},
+"685": {
+"label": "NOT_BLANK",
+"page": "2024-2025/Sec 2/9.0 Notes - Perpendicular and Angle Bisectors.pdf p2",
+"reason": "content"
+},
+"556": {
+"label": "NOT_BLANK",
+"page": "2023-2024/Secondary Math 2 Extended/3.3 Notes - Sec 2 Extended - Graph from Intercept Form.pdf p3",
+"reason": "content"
+},
+"797": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/5 - Notes - Sec 2 - Congruency Proofs.pdf p6",
+"reason": "content"
+},
+"1965": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/3.99 Unit Review - Version B.pdf p2",
+"reason": "content"
+},
+"725": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/10 - Notes - Sec 2 - Quadrilateral Proofs.pdf p3",
+"reason": "content"
+},
+"815": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/Formatives/Notes - Sec 2 - Term 2 - Formative 1 Practice.pdf p2",
+"reason": "content"
+},
+"817": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/Scrimmages/Solutions - Sec 2 - Term 2 - Scrimmage 1 Solutions Key.pdf p2",
+"reason": "content"
+},
+"1158": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p33",
+"reason": "content"
+},
+"1538": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p65",
+"reason": "content"
+},
+"1126": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 A3 Formative 3.pdf p1",
+"reason": "content"
+},
+"1887": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Standard 2-G.CO.11 Rubrik.pdf p4",
+"reason": "content"
+},
+"1751": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p47",
+"reason": "content"
+},
+"333": {
+"label": "NOT_BLANK",
+"page": "2022-2023/Secondary 2 Honors/8.99v2 - Right Triangle Trig.pdf p1",
+"reason": "content"
+},
+"808": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/8 - Notes - Sec 2 - Parallelogram Proofs.pdf p4",
+"reason": "content"
+},
+"1884": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Standard 2-G.CO.11 Rubrik.pdf p1",
+"reason": "content"
+},
+"1886": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Standard 2-G.CO.11 Rubrik.pdf p3",
+"reason": "content"
+},
+"1963": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/3.99 Unit Review - Version A.pdf p5",
+"reason": "content"
+},
+"1795": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p91",
+"reason": "content"
+},
+"1506": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p33",
+"reason": "content"
+},
+"1715": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B8 Formative 3.pdf p11",
+"reason": "content"
+},
+"1958": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 3/3.99 Term 1 Final Review - Same Answer Challenge.pdf p13",
+"reason": "content"
+},
+"789": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/4 - Notes - Sec 2 - Triangle Properties.pdf p5",
+"reason": "content"
+},
+"1518": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B7 Formative 3.pdf p45",
+"reason": "content"
+},
+"1875": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Review - The Case of Ace - Stations.pdf p2",
+"reason": "content"
+},
+"1827": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p27",
+"reason": "content"
+},
+"1851": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p51",
+"reason": "content"
+},
+"1843": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 XX Formative 3 addendum 1.pdf p43",
+"reason": "content"
+},
+"739": {
+"label": "NOT_BLANK",
+"page": "2025-2026/Sec 2/Term 1-2/17 - Notes - Sec 2 - Find Missing Sides Using Trig Orig.pdf p1",
+"reason": "content"
+},
+"1302": {
+"label": "NOT_BLANK",
+"page": "2026-2027/Sec 2/Data/Sec 2 B5 Formative 3.pdf p15",
+"reason": "content"
+}
+}
+}

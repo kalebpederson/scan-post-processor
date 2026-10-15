@@ -1,0 +1,100 @@
+{
+ "1": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "2": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "3": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "4": {
+  "folds": 1,
+  "changed_px_total": 334,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "5": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "6": {
+  "folds": 1,
+  "changed_px_total": 8007,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "7": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "8": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "9": {
+  "folds": 2,
+  "changed_px_total": 8823,
+  "changed_px_outside_bands": 56,
+  "max_abs_diff_outside": 1,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "10": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "11": {
+  "folds": 2,
+  "changed_px_total": 7655,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "12": {
+  "folds": 0,
+  "changed_px_total": 0,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "13": {
+  "folds": 2,
+  "changed_px_total": 23042,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ },
+ "14": {
+  "folds": 1,
+  "changed_px_total": 828,
+  "changed_px_outside_bands": 0,
+  "max_abs_diff_outside": 0,
+  "changed_px_outside_gt_10gl": 0
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "hl_yellow_strong": {
+  "native_dE": 67.84101104736328,
+  "out_dE": 74.95790100097656,
+  "frac_visible": 1.0
+ },
+ "hl_yellow_light": {
+  "native_dE": 32.27633285522461,
+  "out_dE": 34.50334167480469,
+  "frac_visible": 1.0
+ },
+ "hl_pink_light": {
+  "native_dE": 24.186641693115234,
+  "out_dE": 31.243009567260742,
+  "frac_visible": 1.0
+ },
+ "text_under_highlight_out_lum_med": 2.3333333333333335,
+ "yellow_paper_flatten": {
+  "white_frac": 1.0,
+  "paper_out_rgb_med": [
+   255.0,
+   255.0,
+   255.0
+  ],
+  "paper_in_rgb_med": [
+   231.0,
+   226.0,
+   134.0
+  ],
+  "paper_out_L_std": 0.010569233523427474,
+  "ink_out_med": 2.0
+ },
+ "yellow_paper_keep": {
+  "white_frac": 0.0,
+  "paper_out_rgb_med": [
+   234.0,
+   229.0,
+   135.0
+  ],
+  "paper_in_rgb_med": [
+   231.0,
+   226.0,
+   134.0
+  ],
+  "paper_out_L_std": 0.011715911468971066,
+  "ink_out_med": 1.3333333333333333
+ }
+}

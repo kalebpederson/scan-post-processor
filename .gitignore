@@ -1,0 +1,45 @@
+.venv/
+research/corpus/
+research/scans/
+research/out/
+samples/
+__pycache__/
+
+# research/: the record (REPORT.md, scripts, small aggregate results/labels) is published; images are not (they show private scans).
+research/.panels_orig/
+research/**/work/
+research/**/cache/
+research/**/node_modules/
+research/**/*.png
+research/**/*.pdf
+research/**/*.jpg
+research/**/*.ppm
+research/**/*.pkl
+research/**/*.npy
+research/**/*.wasm
+research/**/*.node
+research/r3_encoding/samples/
+research/r4_geometry/blank_feats*.json
+research/r4_geometry/comp_raw.json
+research/r4_geometry/*_raw*.json
+
+# images / documents / build artefacts (never published: they are crops of private scans)
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.pdf
+*.ppm
+*.egg-info/
+*.pyc
+build/
+dist/
+.pytest_cache/
+
+# private-library listings and OCR'd text, regenerable by the research scripts from the private inputs
+research/survey.json
+research/r4_geometry/index.json
+research/r4_geometry/*.log
+research/r2_cleaning/pairs2_raw.json
+research/r2_cleaning/pairs_verified.json

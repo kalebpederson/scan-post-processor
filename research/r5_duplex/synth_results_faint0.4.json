@@ -1,0 +1,746 @@
+[
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   504,
+   2104
+  ],
+  "core": 1694,
+  "ret_cur": 1.0,
+  "ret_new": 0.8341204250295159,
+  "lost": 281
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 1694,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   696,
+   868
+  ],
+  "core": 975,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 975,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   699,
+   994
+  ],
+  "core": 1302,
+  "ret_cur": 1.0,
+  "ret_new": 0.9984639016897081,
+  "lost": 2
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 1302,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   462,
+   937
+  ],
+  "core": 2887,
+  "ret_cur": 1.0,
+  "ret_new": 0.945964669206789,
+  "lost": 156
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 2887,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   594,
+   2104
+  ],
+  "core": 3153,
+  "ret_cur": 1.0,
+  "ret_new": 0.8766254360926102,
+  "lost": 389
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 3153,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   414,
+   928
+  ],
+  "core": 2708,
+  "ret_cur": 1.0,
+  "ret_new": 0.8814623338257016,
+  "lost": 321
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 2708,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   240,
+   991
+  ],
+  "core": 1855,
+  "ret_cur": 1.0,
+  "ret_new": 0.505121293800539,
+  "lost": 918
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 1855,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "blue",
+  "at": [
+   411,
+   925
+  ],
+  "core": 1065,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "blue",
+  "at": null,
+  "core": 1065,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   456,
+   994
+  ],
+  "core": 2715,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 2715,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   693,
+   994
+  ],
+  "core": 2900,
+  "ret_cur": 1.0,
+  "ret_new": 0.9993103448275862,
+  "lost": 2
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 2900,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   690,
+   931
+  ],
+  "core": 2620,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 2620,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   357,
+   994
+  ],
+  "core": 2176,
+  "ret_cur": 0.9967830882352942,
+  "ret_new": 0.9949448529411765,
+  "lost": 4
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 2176,
+  "ret_cur": 0.9967830882352942,
+  "ret_new": 0.9967830882352942,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   570,
+   931
+  ],
+  "core": 2180,
+  "ret_cur": 0.9958715596330275,
+  "ret_new": 0.9958715596330275,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 2180,
+  "ret_cur": 0.9958715596330275,
+  "ret_new": 0.9958715596330275,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   519,
+   937
+  ],
+  "core": 1585,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 1585,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   621,
+   928
+  ],
+  "core": 3310,
+  "ret_cur": 1.0,
+  "ret_new": 0.992749244712991,
+  "lost": 24
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 3310,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "red",
+  "at": [
+   642,
+   2050
+  ],
+  "core": 1155,
+  "ret_cur": 0.9523809523809523,
+  "ret_new": 0.9523809523809523,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "red",
+  "at": null,
+  "core": 1155,
+  "ret_cur": 0.9523809523809523,
+  "ret_new": 0.9523809523809523,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   666,
+   865
+  ],
+  "core": 1125,
+  "ret_cur": 1.0,
+  "ret_new": 0.9777777777777777,
+  "lost": 25
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 1125,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   732,
+   2044
+  ],
+  "core": 1525,
+  "ret_cur": 0.9954098360655738,
+  "ret_new": 0.9954098360655738,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 1525,
+  "ret_cur": 0.9954098360655738,
+  "ret_new": 0.9954098360655738,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   633,
+   988
+  ],
+  "core": 3629,
+  "ret_cur": 1.0,
+  "ret_new": 0.99972444199504,
+  "lost": 1
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 3629,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   408,
+   934
+  ],
+  "core": 2098,
+  "ret_cur": 1.0,
+  "ret_new": 0.9899904671115348,
+  "lost": 21
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 2098,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   693,
+   2113
+  ],
+  "core": 3205,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 3205,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   654,
+   931
+  ],
+  "core": 1201,
+  "ret_cur": 1.0,
+  "ret_new": 0.9858451290591174,
+  "lost": 17
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 1201,
+  "ret_cur": 0.9975020815986678,
+  "ret_new": 0.9975020815986678,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   237,
+   994
+  ],
+  "core": 6397,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 6397,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "overlap",
+  "kind": "neutral",
+  "at": [
+   255,
+   994
+  ],
+  "core": 964,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "clear",
+  "kind": "neutral",
+  "at": null,
+  "core": 964,
+  "ret_cur": 0.979253112033195,
+  "ret_new": 0.979253112033195,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   846,
+   2082
+  ],
+  "core": 73,
+  "ret_cur": 1.0,
+  "ret_new": 0.0136986301369863,
+  "lost": 72
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   615,
+   1026
+  ],
+  "core": 198,
+  "ret_cur": 1.0,
+  "ret_new": 0.0,
+  "lost": 198
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   522,
+   954
+  ],
+  "core": 137,
+  "ret_cur": 1.0,
+  "ret_new": 0.0,
+  "lost": 137
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   651,
+   960
+  ],
+  "core": 370,
+  "ret_cur": 1.0,
+  "ret_new": 0.0,
+  "lost": 370
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   873,
+   225
+  ],
+  "core": 399,
+  "ret_cur": 1.0,
+  "ret_new": 0.506265664160401,
+  "lost": 197
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   708,
+   972
+  ],
+  "core": 148,
+  "ret_cur": 1.0,
+  "ret_new": 0.013513513513513514,
+  "lost": 146
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   750,
+   969
+  ],
+  "core": 59,
+  "ret_cur": 1.0,
+  "ret_new": 0.0,
+  "lost": 59
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   783,
+   966
+  ],
+  "core": 172,
+  "ret_cur": 1.0,
+  "ret_new": 0.0,
+  "lost": 172
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   702,
+   1020
+  ],
+  "core": 282,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   840,
+   1029
+  ],
+  "core": 122,
+  "ret_cur": 1.0,
+  "ret_new": 0.6065573770491803,
+  "lost": 48
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   849,
+   219
+  ],
+  "core": 108,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   762,
+   1023
+  ],
+  "core": 107,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   855,
+   963
+  ],
+  "core": 284,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   651,
+   2136
+  ],
+  "core": 112,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   393,
+   1020
+  ],
+  "core": 112,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   417,
+   1029
+  ],
+  "core": 218,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   849,
+   966
+  ],
+  "core": 123,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   777,
+   2076
+  ],
+  "core": 108,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   756,
+   2145
+  ],
+  "core": 108,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ },
+ {
+  "cls": "tiny_inside_band",
+  "kind": "blue/neutral",
+  "at": [
+   792,
+   222
+  ],
+  "core": 188,
+  "ret_cur": 1.0,
+  "ret_new": 1.0,
+  "lost": 0
+ }
+]

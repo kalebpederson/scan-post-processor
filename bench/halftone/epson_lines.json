@@ -1,0 +1,292 @@
+{
+"doc": "Light-halftone text lines of the Epson 300 dpi keymap (page rotated 90 CW), boxes x,y,w,h at 300 dpi from R1 consensus words with darkness<35 (>=3 words per line). dark = mean R1 bbox darkness.",
+"lines": [
+{
+"box": [
+2759,
+1852,
+371,
+32
+],
+"text": "Quick switch current scheme",
+"n": 4,
+"dark": 26.2
+},
+{
+"box": [
+1804,
+635,
+294,
+38
+],
+"text": "Guip runt/nom tasks",
+"n": 3,
+"dark": 26.9
+},
+{
+"box": [
+2759,
+1709,
+431,
+36
+],
+"text": "Open corresponding tool window",
+"n": 4,
+"dark": 26.9
+},
+{
+"box": [
+1824,
+1710,
+295,
+36
+],
+"text": "quick definition lookup",
+"n": 3,
+"dark": 26.9
+},
+{
+"box": [
+739,
+2284,
+297,
+32
+],
+"text": "Select next occurrence",
+"n": 3,
+"dark": 26.9
+},
+{
+"box": [
+2759,
+1922,
+378,
+33
+],
+"text": "Switch between tabs and toal",
+"n": 5,
+"dark": 27.0
+},
+{
+"box": [
+2760,
+1816,
+399,
+36
+],
+"text": "Inspect current file with current",
+"n": 5,
+"dark": 27.5
+},
+{
+"box": [
+1823,
+1917,
+244,
+45
+],
+"text": "to code start",
+"n": 3,
+"dark": 27.6
+},
+{
+"box": [
+1036,
+1142,
+239,
+32
+],
+"text": "with line comment",
+"n": 3,
+"dark": 27.9
+},
+{
+"box": [
+1036,
+1177,
+266,
+32
+],
+"text": "with block cornment",
+"n": 3,
+"dark": 28.0
+},
+{
+"box": [
+931,
+855,
+296,
+36
+],
+"text": "actions and quick-fixes",
+"n": 3,
+"dark": 28.3
+},
+{
+"box": [
+1804,
+565,
+427,
+36
+],
+"text": "context configuration from editor",
+"n": 4,
+"dark": 28.7
+},
+{
+"box": [
+969,
+998,
+339,
+36
+],
+"text": "of warning caret",
+"n": 3,
+"dark": 29.0
+},
+{
+"box": [
+1891,
+1390,
+276,
+36
+],
+"text": "previous tool window",
+"n": 3,
+"dark": 29.2
+},
+{
+"box": [
+1831,
+458,
+281,
+37
+],
+"text": "configuration and run",
+"n": 3,
+"dark": 29.5
+},
+{
+"box": [
+1823,
+1889,
+233,
+32
+],
+"text": "to code biock end",
+"n": 4,
+"dark": 29.8
+},
+{
+"box": [
+895,
+1748,
+361,
+33
+],
+"text": "for word caret selected",
+"n": 4,
+"dark": 30.0
+},
+{
+"box": [
+1831,
+1639,
+419,
+36
+],
+"text": "current file symbol in any view",
+"n": 6,
+"dark": 30.1
+},
+{
+"box": [
+958,
+1249,
+336,
+35
+],
+"text": "selection to previous state",
+"n": 4,
+"dark": 30.3
+},
+{
+"box": [
+739,
+819,
+293,
+36
+],
+"text": "Basic code completion",
+"n": 3,
+"dark": 30.6
+},
+{
+"box": [
+1431,
+1852,
+395,
+35
+],
+"text": "4 Go to",
+"n": 3,
+"dark": 30.7
+},
+{
+"box": [
+961,
+1498,
+272,
+32
+],
+"text": "line selected block",
+"n": 3,
+"dark": 31.6
+},
+{
+"box": [
+739,
+1606,
+203,
+32
+],
+"text": "Move line down",
+"n": 3,
+"dark": 31.6
+},
+{
+"box": [
+739,
+1892,
+193,
+32
+],
+"text": "Delete to word",
+"n": 3,
+"dark": 31.7
+},
+{
+"box": [
+1865,
+1604,
+246,
+32
+],
+"text": "to edit location",
+"n": 3,
+"dark": 32.1
+},
+{
+"box": [
+1745,
+2314,
+340,
+38
+],
+"text": "Go to numbered bookmark",
+"n": 4,
+"dark": 22.0,
+"manual": true
+}
+]
+}

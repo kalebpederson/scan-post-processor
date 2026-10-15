@@ -1,0 +1,13 @@
+{
+ "_doc": "Halftone test set. kind: gray_logo (screened gray shape), grid_dot (grid lines made of halftone dots), dither_block (gray dithered shaded block), epson_line (light halftone text line, Epson scan rotated 90 CW). 'file' = research/corpus file (path rel. to repo) or 'pdf'+'img' = pdfimages -f 1 -l 3 -png output index (read-only samples/). box = x,y,w,h at native dpi. All verified visually (panels/halftone_regions_*.png).",
+ "regions": [
+  {"id": "logo_p10", "kind": "gray_logo", "pdf": "samples/2026-2027/Sec 3/1.4 Notes - Inverse Relations and Functions.pdf", "img": 0, "dpi": 300, "box": [195, 395, 250, 200]},
+  {"id": "logo_p190", "kind": "gray_logo", "pdf": "samples/2023-2024/Secondary Math 2 Extended/12.1 Notes - Sec 2 Extended - Parabolas - Vertical.pdf", "img": 0, "dpi": 300, "box": [235, 190, 190, 160]},
+  {"id": "grid_p190", "kind": "grid_dot", "pdf": "samples/2023-2024/Secondary Math 2 Extended/12.1 Notes - Sec 2 Extended - Parabolas - Vertical.pdf", "img": 0, "dpi": 300, "box": [1650, 1780, 300, 250]},
+  {"id": "grid_p193", "kind": "grid_dot", "pdf": "samples/2023-2024/Secondary Math 2 Extended/12.2 Notes - Sec 2 Extended - Parabolas - Horizontal.pdf", "img": 0, "dpi": 300, "box": [1000, 1650, 300, 250]},
+  {"id": "dither_p40", "kind": "dither_block", "pdf": "samples/2022-2023/Secondary 2 Honors/9.99 Project - Art with Transformations.pdf", "img": 1, "dpi": 300, "box": [1000, 2230, 300, 200]},
+  {"id": "grid_p299", "kind": "grid_dot", "pdf": "samples/2023-2024/Secondary Math 2/Semester 2/2 Notes - Sec 2 - Absolute Value Functions.pdf", "img": 1, "dpi": 300, "box": [330, 380, 300, 250]},
+  {"id": "grid_single35", "kind": "grid_dot", "file": "research/corpus/single35.jpg", "dpi": 200, "box": [234, 615, 300, 250]},
+  {"id": "grid_p16", "kind": "grid_dot", "pdf": "samples/2026-2027/Sec 3/1.1 Notes - Parent Functions.pdf", "img": 0, "dpi": 300, "box": [260, 1280, 300, 250]}
+ ]
+}

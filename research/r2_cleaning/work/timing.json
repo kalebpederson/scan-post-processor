@@ -1,0 +1,29 @@
+{
+ "300dpi_2544x3295": {
+  "sec_median": 1.781,
+  "sec_min": 1.297,
+  "ms_per_mp": 212.5
+ },
+ "300dpi_B0_numpy": {
+  "sec_median": 0.62,
+  "ms_per_mp": 74.0
+ },
+ "200dpi_1696x2197": {
+  "sec_median": 0.989,
+  "sec_min": 0.708,
+  "ms_per_mp": 265.3
+ },
+ "200dpi_B0_numpy": {
+  "sec_median": 0.322,
+  "ms_per_mp": 86.4
+ },
+ "150dpi_1272x1648": {
+  "sec_median": 0.255,
+  "sec_min": 0.184,
+  "ms_per_mp": 121.6
+ },
+ "150dpi_B0_numpy": {
+  "sec_median": 0.125,
+  "ms_per_mp": 59.6
+ }
+}

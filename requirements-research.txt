@@ -1,0 +1,7 @@
+# extra deps for research/ and bench/ only (install on top of requirements.txt)
+ImageIO==2.38.1
+lazy-loader==0.6
+networkx==3.7
+scikit-image==0.26.0
+scipy==1.18.1
+tifffile==2026.9.20

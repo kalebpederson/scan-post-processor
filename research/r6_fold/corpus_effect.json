@@ -1,0 +1,67 @@
+{
+ "942": {
+  "pdf": "Sec 2 A1 Formative 2.pdf",
+  "page": 48,
+  "folds": [
+   [
+    0.499,
+    "A"
+   ]
+  ],
+  "changed_px": 18725,
+  "changed_px_outside_bands": 3572,
+  "max_abs_diff_outside": 3
+ },
+ "943": {
+  "pdf": "Sec 2 A1 Formative 2.pdf",
+  "page": 49,
+  "folds": [
+   [
+    0.497,
+    "A"
+   ]
+  ],
+  "changed_px": 30008,
+  "changed_px_outside_bands": 8820,
+  "max_abs_diff_outside": 57
+ },
+ "1042": {
+  "pdf": "Sec 2 A3 Formative 2 addendum 1.pdf",
+  "page": 2,
+  "folds": [
+   [
+    0.51,
+    "A"
+   ]
+  ],
+  "changed_px": 32858,
+  "changed_px_outside_bands": 11043,
+  "max_abs_diff_outside": 16
+ },
+ "1901": {
+  "pdf": "1.1 Handout - Parent Functions and Trans",
+  "page": 4,
+  "folds": [
+   [
+    0.505,
+    "A"
+   ]
+  ],
+  "changed_px": 27918,
+  "changed_px_outside_bands": 1061,
+  "max_abs_diff_outside": 102
+ },
+ "1902": {
+  "pdf": "1.1 Handout - Parent Functions and Trans",
+  "page": 5,
+  "folds": [
+   [
+    0.495,
+    "A"
+   ]
+  ],
+  "changed_px": 16327,
+  "changed_px_outside_bands": 25,
+  "max_abs_diff_outside": 21
+ }
+}

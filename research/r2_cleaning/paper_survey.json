@@ -1,0 +1,794 @@
+[
+ {
+  "name": "pair01_front",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair01_back",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair02_front",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair02_back",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair03_front",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair03_back",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair04_front",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair04_back",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair05_front",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair05_back",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair06_front",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 254,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair06_back",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair07_front",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair07_back",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair08_front",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 250,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair08_back",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair09_front",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair09_back",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair10_front",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "pair10_back",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single00",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single01",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single02",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single03",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single04",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single05",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single06",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single07",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single08",
+  "dpi": 200,
+  "paper": [
+   238,
+   202,
+   230
+  ],
+  "paper_chroma": 19.2,
+  "lum_p5": 209,
+  "lum_p95": 214
+ },
+ {
+  "name": "single09",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single10",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single11",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single12",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single13",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single14",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single15",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single16",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single17",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single18",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single19",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single20",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single21",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single22",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single23",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single24",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single25",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single26",
+  "dpi": 833,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single27",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single28",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single29",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single30",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single31",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single32",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single33",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single34",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single35",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single36",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single37",
+  "dpi": 150,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "single38",
+  "dpi": 300,
+  "paper": [
+   163,
+   167,
+   167
+  ],
+  "paper_chroma": 1.4,
+  "lum_p5": 145,
+  "lum_p95": 226
+ },
+ {
+  "name": "single39",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "image00",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "image01",
+  "dpi": 300,
+  "paper": [
+   238,
+   254,
+   171
+  ],
+  "paper_chroma": 42.0,
+  "lum_p5": 232,
+  "lum_p95": 255
+ },
+ {
+  "name": "image02",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "image03",
+  "dpi": 300,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "image04",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ },
+ {
+  "name": "image05",
+  "dpi": 200,
+  "paper": [
+   255,
+   255,
+   255
+  ],
+  "paper_chroma": 0.0,
+  "lum_p5": 255,
+  "lum_p95": 255
+ }
+]

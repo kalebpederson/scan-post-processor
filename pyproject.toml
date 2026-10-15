@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scanpp"
+version = "0.1.0"
+description = "Fast post-processor for scanned documents (simple-scan post-processing script)"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+dependencies = ["numpy", "opencv-python-headless", "pillow", "pikepdf"]
+
+[project.optional-dependencies]
+test = ["pytest", "img2pdf"]
+
+[project.scripts]
+scanpp = "scanpp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: slow tests (large corpus images / real pdftoppm renders)"]

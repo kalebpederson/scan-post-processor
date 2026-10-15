@@ -1,0 +1,11 @@
+#!/bin/bash
+# simple-scan post-processing wrapper: resolves its own real path (so symlinking works) and runs scanpp.
+# Interpreter: $SCANPP_PYTHON, else <repo>/.venv/bin/python if present, else python3.
+# Runs from the source tree (src/ is prepended to PYTHONPATH), so no install is needed.
+self="$(readlink -f "${BASH_SOURCE[0]}")"
+root="$(dirname "$(dirname "$self")")"
+if [ -n "$SCANPP_PYTHON" ]; then py="$SCANPP_PYTHON"
+elif [ -x "$root/.venv/bin/python" ]; then py="$root/.venv/bin/python"
+else py=python3; fi
+export PYTHONPATH="$root/src${PYTHONPATH:+:$PYTHONPATH}"
+exec "$py" -m scanpp "$@"

@@ -1,0 +1,46 @@
+{
+ "p13": {
+  "clean_page": 0.269,
+  "blank_score": 0.0128,
+  "stage1_detect_from_native": 0.1234,
+  "stage1_on_100ppi_rgb": 0.0958,
+  "downscale_to_100ppi": 0.0091,
+  "native_check_and_track": 0.0234,
+  "fold_mask": 0.0339,
+  "remove_folds_total": 0.0626,
+  "n_folds_timed": 2
+ },
+ "p9": {
+  "clean_page": 0.2961,
+  "blank_score": 0.0131,
+  "stage1_detect_from_native": 0.1244,
+  "stage1_on_100ppi_rgb": 0.0995,
+  "downscale_to_100ppi": 0.0092,
+  "native_check_and_track": 0.0231,
+  "fold_mask": 0.0331,
+  "remove_folds_total": 0.0623,
+  "n_folds_timed": 2
+ },
+ "p4": {
+  "clean_page": 0.216,
+  "blank_score": 0.0133,
+  "stage1_detect_from_native": 0.1261,
+  "stage1_on_100ppi_rgb": 0.0996,
+  "downscale_to_100ppi": 0.0092,
+  "native_check_and_track": 0.012,
+  "fold_mask": 0.0175,
+  "remove_folds_total": 0.0232,
+  "n_folds_timed": 1
+ },
+ "p1": {
+  "clean_page": 0.5444,
+  "blank_score": 0.0137,
+  "stage1_detect_from_native": 0.1156,
+  "stage1_on_100ppi_rgb": 0.0954,
+  "downscale_to_100ppi": 0.0091,
+  "native_check_and_track": 0.0113,
+  "fold_mask": 0.0164,
+  "remove_folds_total": 0.0216,
+  "n_folds_timed": 1
+ }
+}

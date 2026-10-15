@@ -1,0 +1,450 @@
+{
+ "ruled_college": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  }
+ ],
+ "ruled_wide": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "hairline_235_1": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.498,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  }
+ ],
+ "hairline_235_3": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.497,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "hairline_215_1": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.498,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "hairline_215_3": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.497,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "hairline_190_1": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.498,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "hairline_190_3": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.502,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.502,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "hairline_160_1": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.5,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.501,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "hairline_160_3": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.502,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": true,
+   "folds": [
+    [
+     0.502,
+     "A",
+     0.0
+    ]
+   ],
+   "best_score_near_half": 1.33
+  }
+ ],
+ "dashed_full": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.93
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.92
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.93
+  }
+ ],
+ "pencil_short": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  }
+ ],
+ "highlighter_band": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  }
+ ],
+ "underline_row": [
+  {
+   "page": 929,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 945,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  },
+  {
+   "page": 1051,
+   "dpi": 200.0,
+   "detected": false,
+   "folds": [],
+   "best_score_near_half": 0.0
+  }
+ ]
+}
