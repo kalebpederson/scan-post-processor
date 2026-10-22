@@ -350,7 +350,9 @@ def edge_artifact_mask(img: np.ndarray, dpi: float, max_strip_in: float = 0.35):
         sheet; any depth up to 40 % of the page, see `boundary`).
     Returns (mask, info)."""
     g, d = prep_gray(img, dpi)
-    mask, info, _ = _edge_mask_work_g(g, d, max_strip_in)
+    mask, info, maxd = _edge_mask_work_g(g, d, max_strip_in)
+    if img.ndim == 3 and any(k.startswith("coil_") for k in info):
+        info["fringe_px"] = _coil_fringe(mask, g, _work_rgb(img, g.shape), d, info, maxd)
     for r in _paper_boundaries(img, g, d, info):         # deep regions beyond a confidently detected paper edge
         mask |= boundary.region_mask(r, mask.shape)
         info["boundary_" + r["side"]] = r["depth_in"]
@@ -392,7 +394,137 @@ def _edge_mask_work_g(g, d, max_strip_in=0.35):
                 mask[:maxd, :] |= m.T
             else:
                 mask[h - maxd:, :] |= m.T[::-1, :]
+    if any(k.startswith("coil_") for k in info):         # spiral notebook on the glass: the lid frame's penumbra
+        for s in "TBLR":
+            if "coil_" + s not in info:
+                _border_hairline(mask, g, s, pl, d, info)
+    n = _corner_dots(mask, g, pl, d)
+    if n:
+        info["corner_dots"] = n
     return mask, info, maxd
+
+
+# research switches (r7): False reproduces the previous behaviour exactly (see research/r7_flatbed)
+FLATBED_CORNER_DOTS = True
+FLATBED_HAIRLINE = True
+HAIRLINE_FRAC = 0.7       # share of the border (corners excluded) that must be shaded
+HAIRLINE_MAX_IN = 0.04
+HAIRLINE_DROP = 12        # levels below paper for "shaded"
+
+
+def _border_hairline(mask, g, side, pl, d, info) -> None:
+    """Flatbed scan of a spiral notebook: the lid frame's penumbra leaves a light grey hairline (<= 0.04 in) along a whole
+    border that is too light for the dark-strip run logic (< 0.75 paper).  Painted (only on pages with a coil, on borders
+    without one) when >= 70 % of the border is shaded > HAIRLINE_DROP levels below paper or already painted, and at least
+    30 % is shaded -- content never lies along the whole border."""
+    if not FLATBED_HAIRLINE:
+        return
+    go = boundary._orient(g, side)
+    mo = boundary._orient(mask, side)
+    nb = max(1, int(round(HAIRLINE_MAX_IN * d)))
+    c = int(0.15 * d)
+    k = 0
+    for r in range(nb):
+        row = go[r, c:go.shape[1] - c]
+        shaded = row < pl - HAIRLINE_DROP
+        if row.size < 8 or float((shaded | mo[r, c:go.shape[1] - c]).mean()) < HAIRLINE_FRAC or float(shaded.mean()) < 0.3:
+            break
+        k += 1
+    if k:
+        mo[:k + 1] |= (go[:k + 1] < pl - HAIRLINE_DROP)
+        info["hairline_" + side] = k
+FLATBED_COIL_FRINGE = True
+
+
+def _corner_dots(mask: np.ndarray, g: np.ndarray, pl: float, d: float) -> int:
+    """Dark specks left in a page corner where two painted scanner strips meet (the strip runs of both borders are
+    "too long" there, so neither is painted).  A connected dark blob (< 0.6 paper) is painted when it touches the image
+    corner region, lies entirely within 0.15 in of both borders, and touches the already painted strip mask.  Returns the
+    number of blobs painted."""
+    if not FLATBED_CORNER_DOTS or not mask.any():
+        return 0
+    k = int(round(0.2 * d))
+    lim = int(round(0.15 * d))
+    h, w = g.shape
+    if min(h, w) < 4 * k:
+        return 0
+    painted = 0
+    for ys, xs in ((slice(0, k), slice(0, k)), (slice(0, k), slice(w - k, w)),
+                   (slice(h - k, h), slice(0, k)), (slice(h - k, h), slice(w - k, w))):
+        win_g, win_m = g[ys, xs], mask[ys, xs]
+        dark = (win_g < 0.6 * pl) & ~win_m
+        if not dark.any():
+            continue
+        near = cv2.dilate(win_m.astype(np.uint8), np.ones((3, 3), np.uint8)) > 0
+        nl, lab = cv2.connectedComponents(dark.astype(np.uint8), connectivity=8)
+        # orient so that (0, 0) is the image corner
+        oy = slice(None) if ys.start == 0 else slice(None, None, -1)
+        ox = slice(None) if xs.start == 0 else slice(None, None, -1)
+        lab_o = lab[oy, ox]
+        for i in range(1, nl):
+            yy, xx = np.nonzero(lab_o == i)
+            if yy.min() != 0 and xx.min() != 0:                       # must touch an image border
+                continue
+            if yy.max() >= lim or xx.max() >= lim:                    # compact: within 0.15 in of both borders
+                continue
+            if not near[lab == i].any():
+                continue
+            blob = cv2.dilate((lab == i).astype(np.uint8), np.ones((5, 5), np.uint8)) > 0
+            win_m |= blob
+            painted += 1
+    return painted
+
+
+def _coil_fringe(mask: np.ndarray, g: np.ndarray, rgb_w: np.ndarray, d: float, info: dict, maxd: int) -> int:
+    """Grow the coil band over its *end* fringe (in place on `mask`; returns the added pixel count).  Where the spiral ends
+    at the top/bottom of the page the paper lifts: a smooth grey/lilac shadow patch continues beyond the band and the
+    cover shows as a thin bluish line along the border.  Within 0.9 in of the page ends and 0.25 in beyond the band (0.55 in for the border line), the
+    pixels connected to the band that are (a) light shading (0.62 paper < gray < paper - 8) and unsaturated, forming
+    blobs >= 0.05 in thick (strokes of pen/pencil are thinner or darker), or (b) a >= 0.15 in long run of coloured (saturated) pixels
+    within 0.07 in of the page's top/bottom border, are added.  Handwriting is never connected through such blobs."""
+    if not FLATBED_COIL_FRINGE:
+        return 0
+    pl = _paper_level(g)
+    n = 0
+    hsv = None
+    k5 = max(3, int(round(0.05 * d))) | 1
+    for side in "LR":
+        if "coil_" + side not in info:
+            continue
+        if hsv is None:
+            hsv = cv2.cvtColor(rgb_w, cv2.COLOR_RGB2HSV)[..., 1]
+        m_o, g_o, s_o = boundary._orient(mask, side), boundary._orient(g, side), boundary._orient(hsv, side)
+        depth, along = m_o.shape
+        cd = min(maxd, int(round(info["coil_" + side] * d + 0.06 * d)))
+        zd = min(maxd, cd + int(round(0.25 * d)))
+        ze = int(round(0.9 * d))
+        zone = np.zeros(m_o.shape, bool)
+        zone[:zd, :ze] = True
+        zone[:zd, along - ze:] = True
+        f = (g_o < pl - 8) & (g_o > 0.62 * pl) & (s_o < 0.15 * 255) & zone
+        f = cv2.morphologyEx(f.astype(np.uint8), cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k5, k5))) > 0
+        bw = max(1, int(round(0.07 * d)))
+        edge = np.zeros(m_o.shape, bool)
+        ze_d = cd + int(round(0.55 * d))                 # the cover line along the border runs further than the shadow
+        edge[:ze_d, :bw] = True
+        edge[:ze_d, along - bw:] = True
+        e = (g_o < pl - 12) & (g_o > 0.55 * pl) & (s_o > 0.2 * 255) & edge
+        e = cv2.morphologyEx(e.astype(np.uint8), cv2.MORPH_OPEN, np.ones((max(3, int(round(0.15 * d))), 1), np.uint8)) > 0
+        cand = (f | e) & ~m_o
+        grow = m_o.copy()
+        cross = cv2.getStructuringElement(cv2.MORPH_CROSS, (3, 3))
+        for _ in range(int(round(0.55 * d))):
+            nxt = (cv2.dilate(grow.astype(np.uint8), cross) > 0) & (cand | grow)
+            if (nxt == grow).all():
+                break
+            grow = nxt
+        add = grow & ~m_o
+        if add.any():
+            add = cv2.dilate(add.astype(np.uint8), np.ones((5, 5), np.uint8)) > 0
+            add &= zone | edge
+            n += int((add & ~m_o).sum())
+            m_o |= add
+    return n
 
 
 def _work_rgb(rgb: np.ndarray, shape: tuple) -> np.ndarray:
@@ -429,6 +561,8 @@ def _clean_edges_g(rgb: np.ndarray, dpi: float, fill=None, inplace: bool = False
     pixel was painted, else g is None (the caller needs the gray of the painted page then)."""
     g, d = prep_gray(rgb, dpi)
     mask, info, maxd = _edge_mask_work_g(g, d)
+    if rgb.ndim == 3 and any(k.startswith("coil_") for k in info):
+        info["fringe_px"] = _coil_fringe(mask, g, _work_rgb(rgb, g.shape), d, info, maxd)
     bounds = _paper_boundaries(rgb, g, d, info)            # detected on the unpainted image
     H, W = rgb.shape[:2]
     gh, gw = mask.shape
