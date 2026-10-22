@@ -66,6 +66,7 @@ the figures and page crops they mention are not in the repository.
 | [R4 geometry](research/r4_geometry/REPORT.md) | Deskew, blank pages, scanner edge artefacts on 1,969 pages | Skew reliable on 92.5 % of pages (p50 0.10 deg, max 3.04 deg); 247 blank pages (12.5 %), 0 false, 0 missed; spiral coil on 34.5 % of pages |
 | [R5 duplex](research/r5_duplex/REPORT.md) | Use the other side of a double-sided sheet to remove marker bleed-through | 0 false pair accepts out of 43,685 non-pairs; 138 adjacent pairs accepted corpus-wide; ~0.24 s CPU per sheet |
 | [R6 fold creases](research/r6_fold/REPORT.md) | Remove gray fold creases without touching rules, grids or text | 9/9 relevant creases on a folded test document, 0 false; 0 false detections on 1,946 of 1,951 evaluated corpus pages (the other 5 fire: 3 genuine creases on pink paper, 2 booklet edges) |
+| [R7 flatbed edges](research/r7_flatbed/REPORT.md) | Edge artefacts of flatbed scans of spiral notebooks (sheet-edge line above the lid, coil-end shadow, frame hairline, corner dots) | Four conservative paint rules; 0 content erased in the reviewed pages; pages without a firing rule are byte-identical to before |
 | [brother_live](research/brother_live/REPORT.md) | The pipeline on a live 22-page Brother ADS-2200 duplex scan | 4 blank pages dropped correctly, skew up to 3.08 deg corrected, small-print words lost 2.2-3.0 % (2.2 % by the scanner JPEG alone). Open issue: saturated highlighter / marker bleed is kept; top-edge blotches on coloured paper |
 | [acceptance](research/acceptance/REPORT.md) | Whole-corpus run, three rounds | See below |
 
@@ -88,6 +89,7 @@ development machine. Tests that need the private corpus skip themselves: on a fr
 
 * Other scanners and drivers (the Brother's brightness/contrast settings are not applied by its driver, so their effect is unknown).
 * Paper sizes other than US Letter.
+* Flatbed scans beyond one user's spiral-notebook scans (an Epson flatbed was used only for reference scans).
 * OCR for non-Latin scripts; OCR was tested with tesseract 5.5.0 and English.
 * Photos, and very low-resolution scans (below 150 dpi).
 * Vertical fold creases and creases at other heights than 1/3, 1/2, 2/3 of the page.

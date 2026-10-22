@@ -352,7 +352,9 @@ def edge_artifact_mask(img: np.ndarray, dpi: float, max_strip_in: float = 0.35):
     g, d = prep_gray(img, dpi)
     mask, info, maxd = _edge_mask_work_g(g, d, max_strip_in)
     if img.ndim == 3 and any(k.startswith("coil_") for k in info):
-        info["fringe_px"] = _coil_fringe(mask, g, _work_rgb(img, g.shape), d, info, maxd)
+        n = _coil_fringe(mask, g, _work_rgb(img, g.shape), d, info, maxd)
+        if n:
+            info["fringe_px"] = n
     for r in _paper_boundaries(img, g, d, info):         # deep regions beyond a confidently detected paper edge
         mask |= boundary.region_mask(r, mask.shape)
         info["boundary_" + r["side"]] = r["depth_in"]
