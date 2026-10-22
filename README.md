@@ -67,6 +67,7 @@ the figures and page crops they mention are not in the repository.
 | [R5 duplex](research/r5_duplex/REPORT.md) | Use the other side of a double-sided sheet to remove marker bleed-through | 0 false pair accepts out of 43,685 non-pairs; 138 adjacent pairs accepted corpus-wide; ~0.24 s CPU per sheet |
 | [R6 fold creases](research/r6_fold/REPORT.md) | Remove gray fold creases without touching rules, grids or text | 9/9 relevant creases on a folded test document, 0 false; 0 false detections on 1,946 of 1,951 evaluated corpus pages (the other 5 fire: 3 genuine creases on pink paper, 2 booklet edges) |
 | [R7 flatbed edges](research/r7_flatbed/REPORT.md) | Edge artefacts of flatbed scans of spiral notebooks (sheet-edge line above the lid, coil-end shadow, frame hairline, corner dots) | Four conservative paint rules; 0 content erased in the reviewed pages; pages without a firing rule are byte-identical to before |
+| [R8 quality](research/r8_quality/REPORT.md) | The `--quality 1..10` ladder: bytes vs fidelity per level | Level 5 = the old output; level 1 is 0.65x the size, level 10 (near-lossless 300 ppi JPEG) 9.3x; 58 real pages, 11 sample PDFs |
 | [brother_live](research/brother_live/REPORT.md) | The pipeline on a live 22-page Brother ADS-2200 duplex scan | 4 blank pages dropped correctly, skew up to 3.08 deg corrected, small-print words lost 2.2-3.0 % (2.2 % by the scanner JPEG alone). Open issue: saturated highlighter / marker bleed is kept; top-edge blotches on coloured paper |
 | [acceptance](research/acceptance/REPORT.md) | Whole-corpus run, three rounds | See below |
 
@@ -80,10 +81,10 @@ anti-aliasing between them.
 off; duplex adds 16.6 % (18.1 s) and fold detection a further ~0.1 s CPU per page, so roughly 16-22 s depending on options and machine load. The
 simple-scan call itself returns in about 0.2-0.3 s because the work runs in the background.
 
-**Test suite.** 295 tests: unit tests on synthetic images for each stage (cleaning, geometry, blank score, duplex, folds),
+**Test suite.** 328 tests: unit tests on synthetic images for each stage (cleaning, geometry, blank score, duplex, folds),
 encoder and PDF validity tests, integration tests of the CLI, background mode and the simple-scan protocol, safety and backup
-tests, truncated-image robustness, OCR, and equivalence of the shipped code with the research prototypes. All 295 pass on the
-development machine. Tests that need the private corpus skip themselves: on a fresh clone 275 pass and 20 skip.
+tests, truncated-image robustness, OCR, and equivalence of the shipped code with the research prototypes. 327 pass and 1 is skipped on the
+development machine. Tests that need the private corpus skip themselves: on a fresh clone 308 pass and 20 skip.
 
 **Not tested / known gaps:**
 
@@ -147,9 +148,10 @@ Recommended scan settings: colour, 300 dpi (200-300 works; below 150 dpi is unte
 | `--duplex auto\|off` | `auto` (default): in multi-page PDFs use the other side of a double-sided sheet to remove coloured-marker bleed-through - see "Duplex". `off`: every page on its own |
 | `--folds auto\|off` | `auto` (default): remove the gray crease line a folded sheet leaves - see "Fold creases". `off`: leave creases alone |
 | `--no-deskew`, `--no-edge-clean` | disable straightening / edge-strip + coil painting |
-| `--dpi N` | output ppi for the `jpeg`/`jpeg200` encoders ONLY (default 150 / 200; never upsamples). `auto` and `mrc` ignore it (300 ppi mask, 100 ppi colour layer, 150 ppi JPEG pages). Image files (JPEG/PNG/WebP) are still resampled to `--dpi` (default 200) |
+| `--dpi N` | output ppi for the `jpeg`/`jpeg200` encoders ONLY (default 150 / 200; never upsamples). `auto` and `mrc` ignore it (300 ppi mask, colour layer and JPEG-page ppi follow `--quality`). An explicit `--dpi` always wins over the ppi that `--quality` picks for `jpeg`/`jpeg200`. Image files (JPEG/PNG/WebP) are still resampled to `--dpi` (default 200) |
 | `--jobs N` | worker processes (default: CPU count) |
 | `--encoder NAME` | `auto` (default), `mrc`, `jpeg`, `jpeg200` - see "Encoders"; new encoders register in `scanpp/encode.py` |
+| `--quality N` | output image quality, an integer 1..10 (default **5**, which is the output of earlier versions byte for byte). Higher is closer to the cleaned page and makes bigger files, lower is smaller. It changes how the cleaned page is *encoded* only: paper whitening, ink gate, deskew, blank-page dropping are the same at every level (use `--paper keep` to keep the paper tint). See "Quality" |
 | `--backup-dir DIR` / `--no-backup` | backup location (default `.originals/` next to the file) / no backup |
 | `--ocr` | add an invisible, searchable text layer to PDF pages (tesseract; off by default) - see "OCR" |
 | `--ocr-lang LANG` | tesseract language(s) for `--ocr`, e.g. `eng` (default) or `eng+spa` |
@@ -247,8 +249,56 @@ Pages below 300 dpi are never upsampled (mask at native resolution, colour layer
 page is area-downsampled to 300 ppi first. If `jbig2` is missing or fails, the mask is CCITT G4 instead (a bit-identical
 render, ~25% larger masks; logged once). Blank pages that are kept get an empty content stream (pure white page).
 The per-page report records `scheme` (`e3`, `e3x`, `e1`, `blank`), mask codec and bytes. Output of `auto`/`mrc` is not
-re-processed by a second run (images with a `/Mask` are not "plain scans"). Needs `jbig2` (Debian/Ubuntu: `jbig2enc-tools`)
+re-processed by a second run (images with a `/Mask` are not "plain scans"). The numbers above (100 ppi, q40, 150 ppi, q55) are the `--quality 5` values; see "Quality". Needs `jbig2` (Debian/Ubuntu: `jbig2enc-tools`)
 for the smallest files; pdf viewers all render JBIG2 generic regions.
+
+## Quality (`--quality 1..10`)
+
+    scanpp --quality 8 scan.pdf
+    gsettings set org.gnome.SimpleScan postproc-arguments '--quality 8'
+
+The default, **5**, is exactly what earlier versions wrote (the output is byte-identical, apart from the random trailer `/ID`).
+Raising the level makes the stored page closer to the *cleaned* page at the cost of size; lowering it saves size. Only the encoding
+changes: paper whitening, the ink gate, deskew, duplex and fold handling, and blank-page dropping are identical at every level (to keep
+the paper's colour use `--paper keep`; that is a cleaning choice, not a quality level). Everything stays within the portable set:
+baseline JPEG (always 4:4:4, never chroma-subsampled), JBIG2 generic region (lossless; CCITT G4 if `jbig2` is missing), and nothing else.
+No JPEG 2000, JPEG XL, WebP or lossy JBIG2 at any level. Output of every level carries the scanpp marker and is not re-processed.
+
+How the levels work (`auto` encoder). Levels 1-6 keep the page as a 300 ppi 1-bit ink mask over a low-resolution colour layer (the
+mask is crisp and tiny but binary: it drops faint pencil and the anti-aliased edge of strokes, 21 % of the faint-ink pixels on the
+test pages), and only change the colour layer's resolution and JPEG quality. From level 7 every page is stored as one full-page JPEG,
+which keeps anti-aliasing and faint ink; levels 8-10 are at the scan's own resolution (300 ppi) and differ in JPEG quality.
+Highlighter / ink-heavy pages already were full-page JPEGs and follow the "JPEG page" column. Pages scanned below the listed ppi are
+never upsampled.
+
+Measured on 58 real 300 ppi pages (26 corpus pages, 32 pages of 11 sample PDFs), pages cleaned with the shipped pipeline, then encoded; the
+decoded page is compared with the cleaned full-resolution page (SSIM on luminance; mean CIEDE2000 over coloured ink pixels; stroke edge
+sharpness = gradient energy at the reference's edges, 1.0 = as sharp; OCR = tesseract word recall):
+
+| level | mask pages (colour layer) | JPEG pages (highlighter / art) | KB/page | x level 5 | SSIM | colour dE | edge sharpness | OCR |
+|---|---|---|---|---|---|---|---|---|
+| 1 | mask + 75 ppi q25 | 150 ppi q35 | 54 | 0.65 | 0.9731 | 8.98 | 0.970 | 0.964 |
+| 2 | mask + 75 ppi q40 | 150 ppi q40 | 63 | 0.76 | 0.9736 | 8.57 | 0.980 | 0.965 |
+| 3 | mask + 100 ppi q25 | 150 ppi q45 | 69 | 0.83 | 0.9748 | 8.31 | 0.977 | 0.966 |
+| 4 | mask + 100 ppi q32 | 150 ppi q50 | 76 | 0.91 | 0.9751 | 8.06 | 0.982 | 0.964 |
+| **5** | mask + 100 ppi q40 | 150 ppi q55 | **83** | **1.00** | 0.9753 | 7.86 | 0.985 | 0.960 |
+| 6 | mask + 150 ppi q40 | 150 ppi q58 | 129 | 1.56 | 0.9777 | 6.83 | 0.990 | 0.965 |
+| 7 | all pages: JPEG 200 ppi q58 | same | 217 | 2.61 | 0.9846 | 4.67 | 0.823 | 0.962 |
+| 8 | all pages: JPEG 300 ppi q58 | same | 393 | 4.74 | 0.9955 | 2.38 | 0.993 | 0.963 |
+| 9 | all pages: JPEG 300 ppi q75 | same | 486 | 5.87 | 0.9972 | 1.89 | 0.995 | 0.973 |
+| 10 | all pages: JPEG 300 ppi q92 (near-lossless) | same | 769 | 9.28 | 0.9991 | 1.14 | 0.997 | 0.964 |
+
+Over 11 sample PDFs processed end to end (38 pages, 78 KB/page at level 5), total output size relative to level 5 is
+0.63, 0.75, 0.82, 0.91, 1.00, 1.62, 2.84, 5.0, 6.2, 9.9 for levels 1-10 (per PDF: level 1 0.59-0.67, level 10 5.2-12.6). Wall time does not depend on the level (all levels within +-5% of level 5; 7-10 are about 4% faster, no `jbig2` run). OCR word recall does not separate the levels (every level is within the ~+-0.02 noise of the measurement; text stays
+legible at level 1 because masks stay at 300 ppi and JPEG pages never go below 150 ppi, R1's floor). Level 7's lower edge sharpness
+is real: a 200 ppi JPEG is softer than a 300 ppi 1-bit mask, but it keeps the anti-aliasing and the faint ink that the mask drops, which
+is why its SSIM and colour fidelity are better. Details, the candidate sweep and limitations: `research/r8_quality/REPORT.md`.
+
+Interaction with other options. `--encoder` picks the scheme and `--quality` its resolution/quality: `mrc` always keeps mask + colour
+layer (its layer resolution and JPEG quality follow the level; at high levels it stays mask-limited), `jpeg` and `jpeg200` are
+always full-page JPEGs whose quality follows the level (and whose ppi is 150 / 200, or higher where the level asks for more).
+An explicit `--dpi` overrides the ppi of `jpeg`/`jpeg200` at every level (quality stays the level's). Image files (JPEG/PNG/WebP)
+are not affected by `--quality`.
 
 ## OCR (`--ocr`, optional, off by default)
 

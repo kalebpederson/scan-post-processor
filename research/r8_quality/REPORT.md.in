@@ -1,0 +1,104 @@
+# R8: `--quality 1..10`
+
+> Figures and per-page rows are not published (private scans). This directory holds the scripts and aggregate numbers only
+> (`*_summary.json`); renders and per-page rows are in the git-ignored `work/`.
+
+## Answer
+
+`--quality N` (integer 1..10, default 5) selects how the *cleaned* page is encoded. Level 5 is the previous behaviour, byte for byte
+(11 sample PDFs compared with the output of the unmodified code, only the random trailer `/ID` differs, as it does between two runs of
+the old code). Cleaning (paper whitening, ink gate, deskew, duplex, folds, blank dropping) is not touched.
+
+| level | what is stored (`auto` encoder) | KB/page | x level 5 |
+|---|---|---|---|
+| 1 | 300 ppi JBIG2 mask + 75 ppi q25 colour layer (JPEG pages 150 ppi q35) | 54 | 0.65 |
+| 2 | mask + 75 ppi q40 (JPEG pages 150 ppi q40) | 63 | 0.76 |
+| 3 | mask + 100 ppi q25 (150 ppi q45) | 69 | 0.83 |
+| 4 | mask + 100 ppi q32 (150 ppi q50) | 76 | 0.91 |
+| **5** | mask + 100 ppi q40 (150 ppi q55) = old output | **83** | **1.00** |
+| 6 | mask + 150 ppi q40 (150 ppi q58) | 129 | 1.56 |
+| 7 | every page a JPEG, 200 ppi q58 | 217 | 2.61 |
+| 8 | JPEG 300 ppi q58 | 393 | 4.74 |
+| 9 | JPEG 300 ppi q75 | 486 | 5.87 |
+| 10 | JPEG 300 ppi q92 (near-lossless) | 769 | 9.28 |
+
+Bytes and every fidelity measure (SSIM, PSNR, colour dE, ink dE) are monotone over 1..10; steps are about 1.1x below level 5 (there is little
+room: the mask alone is ~25 KB and the layer cannot get much coarser without colour errors) and 1.25-1.8x above. All JPEGs are
+baseline sequential 4:4:4; masks are JBIG2 generic region (CCITT G4 without `jbig2`); the set of image filters in any output is a subset of
+{DCTDecode, JBIG2Decode, CCITTFaxDecode}. Flate lossless (2 MB/page) was measured and rejected: level 10 gets within SSIM 0.0009 at 0.4x
+the size. 4:2:0, JPX, JXL, WebP and lossy JBIG2 are not used.
+
+Why the ladder switches from masks to full-page JPEG at level 7: the 1-bit mask loses anti-aliasing and faint ink (20.6 % of the faint ink
+pixels, the "faint loss" column; SSIM of any mask page tops out at ~0.98 however fine the colour layer), and a full-page JPEG at 200 ppi
+beats a mask page at the same size on SSIM (0.984 vs 0.979 at ~220 KB) and colour dE. The price is edge sharpness (0.82 vs 0.99 at level 6):
+JPEG at 200 ppi is softer than a 1-bit 300 ppi mask. Level 8 is back at the scan's resolution and gets both. At 300 ppi even q40 beats
+250 ppi q85 on SSIM, PSNR, dE and edge sharpness at 70 % of the size, so 250 ppi has no level.
+
+Wall time: no measurable dependence on the level (3 passes of 11 PDFs, min wall 25.6-29.3 s per pass, level 5: 26.8 s; levels 7-10 about 4 % faster
+because no `jbig2` process is spawned; encode stage per page 0.9-1.2 s at levels 1-6 vs 0.6 s at 7-10 on the loaded dev machine).
+
+## Method
+
+* **Pages (58).** The 26 native-300 ppi pages of the private development corpus (`research/corpus`; the 150/200 ppi pages are upsampled
+  and would hide resolution effects) and the first 3 pages of each of 11 sample PDFs (scanner output of the same families; plain scans).
+  Cleaned with the shipped pipeline (`process_array`, flatten, no resize), no page was blank. The level-5 rule classified them
+  as 50 colour (E3x), 5 gray (E3), 3 JPEG pages (E1: highlighter / ink-heavy).
+* **Candidates.** `study.py`: sweeps of the knobs the encoders have (colour layer ppi 75-200 x q 25-70; full-page JPEG 150-300 ppi x
+  q 25-96; 200 ppi mask; lossless Flate with PNG predictor) in `sweep` and `sweep2`, then the 10 levels as the shipped code encodes them (`ladder`).
+* **Fidelity (vs the cleaned full-resolution page).** The encoded page is decoded back to pixels (`recon`: JPEG decoded, layer bilinearly
+  upsampled, mask recomputed - it is lossless - and the colour layer shown through it) and compared. A poppler render was tried first and
+  rejected: even lossless Flate at 300 ppi came back with SSIM 0.986 / dE 6 because the renderer resamples at 1:1; the decoded-pixel
+  comparison gives exactly 1.0 for lossless and is renderer independent. Metrics: SSIM and PSNR on luminance; CIEDE2000 over ink pixels
+  (reference min channel < 150, "dE ink") and over coloured ink (also C* > 25, "colour dE"), up to 150k sampled pixels; stroke edge sharpness
+  = sum of Sobel gradient at the reference's strong edges, render / reference; solid and faint ink loss (reference ink rendered white),
+  speckle (reference-white rendered non-white).
+* **Legibility.** tesseract (psm 3, eng) word recall: words of the cleaned page OCR'd at conf >= 90 must reappear in the OCR of a 300 dpi poppler
+  render of the encoded PDF (R1/R3 method), pages with >= 20 reference words.
+* **End to end.** `run_set.sh` / `run_levels.sh`: the real CLI on the 11 sample PDFs (38 output pages after blank dropping) for each level;
+  `cmp_ids.py` for byte identity at level 5; `run_timing.sh` for wall time (3 passes, shared 16-CPU machine).
+* Not re-measured here, and relied on: R1 (150 ppi is the floor for light printed text; hence no JPEG page below 150 ppi at any level) and
+  R3 (mask below 300 ppi loses light text; 4:2:0 swaps pen colours; 75 ppi colour layer leaves ~1 % of stroke components with changed colour
+  and was only used at the two smallest levels).
+
+## Tables
+
+Ladder (the shipped levels), all 58 pages, then per class of the level-5 rule (`ladder_summary.json`). KB = image bytes per page (PDF overhead ~1.5 KB
+not included). Edge = stroke edge sharpness, loss = faint-ink loss, OCR = word recall.
+
+@@LADDER@@
+
+Candidate sweep (58 pages, auto-routed mask pages and plain-JPEG pages; `mask_cP_qQ` = ink mask + P ppi q Q colour layer, `jpeg_pP_qQ` = full page; highlighter pages
+stay JPEG 150/q55 in the `mask_` rows) - `sweep_summary.json`:
+
+@@SWEEP@@
+
+Second sweep, the exact settings the ladder uses and neighbours - `sweep2_summary.json`:
+
+@@SWEEP2@@
+
+End to end on 11 sample PDFs (38 pages), output size relative to level 5 (`levels_summary.json`; per-PDF range in the last columns):
+
+@@LEVELS@@
+
+Wall time (`timing_summary.json`, seconds for the 11 PDFs, three passes; the machine was shared so single passes vary +-15 %):
+
+@@TIMING@@
+
+## Limitations
+
+* Fidelity is measured against the *cleaned* page (as the request asks); how good the cleaning is, is R2. `--quality 10` cannot restore what the ink
+  gate removed. The cleaned pages come from 300 ppi scanner JPEGs, so the 300 ppi levels partly re-encode scanner JPEG noise.
+* SSIM jumps between levels 7 and 8 mostly because the 300 ppi page is on the reference's pixel grid (no resampling); 250 ppi would sit between
+  by metric but is dominated by 300 ppi q40 on bytes, so it was dropped. Metrics are on-grid pixel comparisons, not a viewer simulation; the
+  bilinear upsample of low-resolution layers is a neutral choice and viewers differ (R3: renderers agree within 2-3/255 mean).
+* OCR recall does not separate levels (all 0.960-0.973; noise ~+-0.02) because the reference words are the cleaned page's own and tesseract is
+  insensitive at 300 ppi renders; legibility at level 1 rests on R1/R3 (mask stays 300 ppi, JPEG pages >= 150 ppi), not on this table. Tiny light
+  halftone text (R1's hardest class, Epson 600 dpi scans) was not re-run.
+* Level 1-2 use the 75 ppi colour layer that R3 round 2 found too coarse for "colour identity ~ 0" (1.0 % of stroke components changed, 0.46 % swaps
+  with 4:4:4); that is the price of the smallest levels, level 3 upward is at 100 ppi. Colour identity itself (component hue test of R3) was not re-measured;
+  colour dE is the proxy.
+* 58 pages from one family of material (maths worksheets, one school); one scanner (Brother ADS-2200) and a few flatbed pages. Gray (5) and JPEG-route (3) classes are small.
+* Sizes are image bytes; the PDF container adds ~1.5 KB per page; with `--ocr` the text layer adds on top.
+* Wall times on a shared machine (load average 100+ from other jobs during the runs) have +-15 % noise; the conclusion is only "no dependence".
+* Viewers: JPEG 4:4:4 baseline and JBIG2 generic are as portable as before; level 7-10 outputs contain no JBIG2 at all. Nothing was run in Acrobat/Preview.
+* Image-file input (JPEG/PNG/WebP) does not use the page encoders, so `--quality` does not apply to it.
