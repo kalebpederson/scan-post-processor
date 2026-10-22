@@ -26,7 +26,7 @@ Configurable: paper colour (flatten to white, the default, or keep the tint), OC
 Per page: decode embedded image -> paint over scanner edge strips / spiral coil -> remove fold creases -> blank-page detection (drop) ->
 skew estimate -> flat-field cleaning (paper to white, ink kept, hue preserved) -> deskew -> encode the full-resolution
 cleaned page (the encoder does its own resampling, see "Encoders"). Page size (MediaBox, /Rotate) is preserved.
-PDFs that are not plain scans (any text/fonts, or not exactly one image per page) are logged and left untouched.
+PDFs that are not plain scans (any text/fonts, not exactly one image per page, or an image with a real mask) are logged and left untouched. An image whose `/SMask` is effectively opaque (all 255, or only a border within 2 px, as written by old ImageMagick pipelines) still counts as a plain scan; the SMask is dropped.
 
 ## What it is for, and what it is not for
 

@@ -88,6 +88,30 @@ def scanpp_marker(pdf: pikepdf.Pdf) -> str | None:
     return None
 
 
+def _smask_effectively_opaque(sm, border: int = 2, frac: float = 0.995) -> bool:
+    """Legacy ImageMagick output carries a soft mask that is all 255 (or 255 except a resize border). scanpp itself never writes
+    an /SMask, so such a mask is ignored. True only if >= `frac` of the pixels are 255 and every other pixel is within `border` px
+    of the edge. Any failure to decode counts as not opaque."""
+    try:
+        if not isinstance(sm, pikepdf.Stream) or sm.get("/Subtype") != Name.Image or sm.get("/ImageMask", False) or "/Mask" in sm:
+            return False
+        if "/SMask" in sm or "/Matte" in sm:
+            return False
+        a = np.asarray(PdfImage(sm).as_pil_image().convert("L"))
+        if a.ndim != 2 or a.size == 0:
+            return False
+        low = a < 255
+        n_low = int(low.sum())
+        if n_low == 0:
+            return True
+        if n_low > (1.0 - frac) * a.size:
+            return False
+        inner = low[border:-border, border:-border] if min(a.shape) > 2 * border else low[:0, :0]
+        return not inner.any()
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def classify_page(page) -> tuple[bool, str]:
     """Is this page a plain scan: one image XObject drawn by q/cm/Do/Q only, no fonts or text?
     (Pages that carry scanpp's own invisible text layer are scanpp output, not plain scans.)"""
@@ -102,7 +126,7 @@ def classify_page(page) -> tuple[bool, str]:
     img = next(iter(xobjs.values()))
     if img.get("/Subtype") != Name.Image:
         return False, "XObject is not an image"
-    if "/Mask" in img or "/SMask" in img:
+    if "/Mask" in img or "/SMaskInData" in img or ("/SMask" in img and not _smask_effectively_opaque(img.SMask)):
         return False, "image has a mask (already MRC-encoded?)"
     try:
         ops = pikepdf.parse_content_stream(page)
