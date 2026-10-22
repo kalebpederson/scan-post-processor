@@ -20,6 +20,7 @@ class Options:
     dpi: int | None = None        # jpeg/jpeg200 encoders only (None: 150 / 200); image files: 200
     jobs: int = 0                 # 0 -> os.cpu_count()
     encoder: str = "auto"
+    quality: int = 5              # 1..10, ENCODING only (5 = historical output); see encode.quality_settings
     backup: bool = True
     backup_dir: str | None = None
     ocr: bool = False

@@ -13,6 +13,8 @@ Encoders (`--encoder`):
   jpeg     always E1: baseline JPEG, 150 ppi, q55, 4:4:4
   jpeg200  E1 at 200 ppi (max legibility)
 `rgb` is the full-resolution cleaned page; encoders do their own resampling (never upsample).
+`--quality 1..10` (QualitySettings, QUALITY_LADDER) sets the resolution / JPEG quality of the layers and, from level 7, makes `auto` store
+every page as a full-page JPEG; level 5 = the constants below, i.e. the historical output (research/r8_quality).
 To add an encoder write `(rgb, dpi, page_size_pt, jpeg_dpi=None) -> EncodedPage` and register it with
 `@register_encoder("name")`.
 """
@@ -28,10 +30,54 @@ JPEG_Q_E1 = 55
 MRC_COL_PPI = 100
 MRC_COL_Q = 40
 MRC_MASK_PPI = 300
+DEFAULT_QUALITY = 5
+QUALITY_MIN, QUALITY_MAX = 1, 10
 CHROMA_THRESHOLD = 0.08       # per-pixel chroma (max-min of channels / 255) that counts as "colour"
 CHROMA_FRACTION = 0.0005      # a page is gray when fewer than this fraction of pixels are coloured
 DEFAULT_ENCODER = "auto"
 JPEG_PPI = {"jpeg": 150, "jpeg200": 200}
+
+
+@dataclass(frozen=True)
+class QualitySettings:
+    """The encoding knobs one `--quality` level stands for (see `quality_settings` and README "Quality").  The defaults are
+    the level-5 values, i.e. the encoders' historical constants.  Every JPEG is baseline, 4:4:4; masks are JBIG2 generic / G4."""
+    level: int = DEFAULT_QUALITY
+    col_ppi: int = MRC_COL_PPI     # ppi of the colour / gray layer under the ink mask (E3x / E3)
+    col_q: int = MRC_COL_Q         # its JPEG quality
+    mask_ppi: int = MRC_MASK_PPI   # ink mask resolution (never above the page's native ppi)
+    e1_ppi: int = 150              # ppi of full-page JPEG pages (E1)
+    e1_q: int = JPEG_Q_E1          # their JPEG quality
+    full_page: bool = False        # auto: every non-blank page is a full-page JPEG (a 1-bit mask loses stroke anti-aliasing)
+
+
+def quality_settings(level) -> QualitySettings:
+    """Settings for `level` (1..10), or pass a QualitySettings through (used by the study scripts)."""
+    if isinstance(level, QualitySettings):
+        return level
+    if isinstance(level, int) and not isinstance(level, bool) and level in QUALITY_LADDER:
+        return QUALITY_LADDER[level]
+    raise ValueError(f"quality must be an integer {QUALITY_MIN}..{QUALITY_MAX}, got {level!r}")
+
+
+# The ladder, from research/r8_quality (measured on 58 real 300 ppi pages): (level, colour-layer ppi, colour-layer q, E1 ppi, E1 q, full_page).
+# Levels 1-5 keep the 1-bit ink mask + low-resolution colour layer (E3/E3x) and only turn the layer's resolution / JPEG quality (and the
+# E1 quality of highlighter pages); levels 6-10 add resolution and quality, and from 7 on every page is a full-page JPEG, because a 1-bit
+# mask cannot carry stroke anti-aliasing or faint pencil.  All JPEGs baseline 4:4:4; masks JBIG2 generic (or G4); mask ppi min(300, native).
+_LADDER = [
+    (1, 75, 25, 150, 35, False),
+    (2, 75, 40, 150, 40, False),
+    (3, 100, 25, 150, 45, False),
+    (4, 100, 32, 150, 50, False),
+    (5, 100, 40, 150, 55, False),        # = the historical defaults
+    (6, 150, 40, 150, 58, False),
+    (7, 150, 55, 200, 58, True),
+    (8, 200, 55, 300, 58, True),
+    (9, 200, 70, 300, 75, True),
+    (10, 300, 85, 300, 92, True),
+]
+QUALITY_LADDER: dict[int, QualitySettings] = {
+    n: QualitySettings(n, cp, cq, MRC_MASK_PPI, ep, eq, fp) for n, cp, cq, ep, eq, fp in _LADDER}
 
 
 @dataclass
@@ -83,14 +129,14 @@ def encoder_names() -> list[str]:
 
 
 def encode_page(rgb: np.ndarray, dpi: float, page_size_pt: tuple, encoder: str = DEFAULT_ENCODER,
-                jpeg_dpi: int | None = None) -> EncodedPage:
+                jpeg_dpi: int | None = None, quality: int | QualitySettings = DEFAULT_QUALITY) -> EncodedPage:
     """`rgb`: cleaned page at its native resolution `dpi`.  `jpeg_dpi` (the --dpi option) overrides the ppi of the
-    jpeg/jpeg200 encoders only."""
+    jpeg/jpeg200 encoders only.  `quality`: the --quality level 1..10 (encoding only; 5 = the historical settings)."""
     try:
         fn = _ENCODERS[encoder]
     except KeyError:
         raise ValueError(f"unknown encoder {encoder!r}; available: {', '.join(encoder_names())}") from None
-    return fn(rgb, dpi, page_size_pt, jpeg_dpi)
+    return fn(rgb, dpi, page_size_pt, jpeg_dpi, quality_settings(quality))
 
 
 def has_color(rgb: np.ndarray, thr: float = CHROMA_THRESHOLD, frac: float = CHROMA_FRACTION) -> bool:
@@ -120,7 +166,7 @@ def _is_white(rgb: np.ndarray) -> bool:
 
 
 # ----------------------------------------------------------------------------- E1: plain JPEG
-def _encode_e1(rgb: np.ndarray, dpi: float, page_size_pt: tuple, ppi: int, scheme: str) -> EncodedPage:
+def _encode_e1(rgb: np.ndarray, dpi: float, page_size_pt: tuple, ppi: int, scheme: str, q: int = JPEG_Q_E1) -> EncodedPage:
     import cv2
     from .mrc import jpeg_bytes
     gray = not has_color(rgb)
@@ -132,16 +178,17 @@ def _encode_e1(rgb: np.ndarray, dpi: float, page_size_pt: tuple, ppi: int, schem
         out_ppi = float(ppi)
     img = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY) if gray else rgb
     h, w = img.shape[:2]
-    spec = ImageSpec(jpeg_bytes(img, JPEG_Q_E1, 0), w, h, "DeviceGray" if gray else "DeviceRGB", 8, "DCTDecode")
+    spec = ImageSpec(jpeg_bytes(img, q, 0), w, h, "DeviceGray" if gray else "DeviceRGB", 8, "DCTDecode")
     return EncodedPage({"Im0": spec}, _full_page_content(*page_size_pt),
-                       info={"scheme": scheme, "gray": gray, "dpi": round(out_ppi, 2), "jpeg_ppi": round(out_ppi, 2)})
+                       info={"scheme": scheme, "gray": gray, "dpi": round(out_ppi, 2), "jpeg_ppi": round(out_ppi, 2), "jpeg_q": q})
 
 
 def _jpeg_encoder(name: str):
-    def fn(rgb, dpi, page_size_pt, jpeg_dpi=None):
+    def fn(rgb, dpi, page_size_pt, jpeg_dpi=None, qs=QualitySettings()):
         if _is_white(rgb):
             return _blank_page(dpi)
-        return _encode_e1(rgb, dpi, page_size_pt, jpeg_dpi or JPEG_PPI[name], "e1")
+        # ppi: --dpi if given, else the encoder's own (150 / 200), raised to the quality level's ppi when that is higher
+        return _encode_e1(rgb, dpi, page_size_pt, jpeg_dpi or max(JPEG_PPI[name], qs.e1_ppi), "e1", qs.e1_q)
     register_encoder(name)(fn)
     return fn
 
@@ -151,25 +198,25 @@ encode_jpeg200 = _jpeg_encoder("jpeg200")
 
 
 # ----------------------------------------------------------------------------- E3 / E3x: ink mask + colour layer
-def _to_300(rgb: np.ndarray, dpi: float):
-    """Masks are made at min(300, native) ppi: oversampled inputs are area-downsampled to 300, others stay native."""
-    if dpi > MRC_MASK_PPI * 1.02:
+def _to_mask_ppi(rgb: np.ndarray, dpi: float, mask_ppi: int = MRC_MASK_PPI):
+    """Masks are made at min(mask_ppi, native) ppi: oversampled inputs are area-downsampled, others stay native."""
+    if dpi > mask_ppi * 1.02:
         import cv2
-        s = MRC_MASK_PPI / dpi
+        s = mask_ppi / dpi
         h, w = rgb.shape[:2]
-        return cv2.resize(rgb, (round(w * s), round(h * s)), interpolation=cv2.INTER_AREA), float(MRC_MASK_PPI)
+        return cv2.resize(rgb, (round(w * s), round(h * s)), interpolation=cv2.INTER_AREA), float(mask_ppi)
     return rgb, float(dpi)
 
 
-def _encode_mrc(rgb: np.ndarray, dpi: float, page_size_pt: tuple, gray: bool) -> EncodedPage:
+def _encode_mrc(rgb: np.ndarray, dpi: float, page_size_pt: tuple, gray: bool, qs: QualitySettings = QualitySettings()) -> EncodedPage:
     import cv2
     from . import mrc
-    rgb, ppi = _to_300(rgb, dpi)
+    rgb, ppi = _to_mask_ppi(rgb, dpi, qs.mask_ppi)
     ink = mrc.ink_mask(rgb, ppi)
     if not ink.any():
         return _blank_page(dpi)
     h, w = ink.shape
-    col = mrc.color_layer(rgb, ink, ppi, MRC_COL_PPI)
+    col = mrc.color_layer(rgb, ink, ppi, qs.col_ppi)
     if gray:
         col = cv2.cvtColor(col, cv2.COLOR_RGB2GRAY)
     ch, cw = col.shape[:2]
@@ -178,7 +225,7 @@ def _encode_mrc(rgb: np.ndarray, dpi: float, page_size_pt: tuple, gray: bool) ->
     if kw["parms"]:
         extra["DecodeParms"] = kw["parms"]
     mask = ImageSpec(data, w, h, None, 1, kw["filter"], extra)
-    fg = ImageSpec(mrc.jpeg_bytes(col, MRC_COL_Q, 0), cw, ch, "DeviceGray" if gray else "DeviceRGB", 8, "DCTDecode",
+    fg = ImageSpec(mrc.jpeg_bytes(col, qs.col_q, 0), cw, ch, "DeviceGray" if gray else "DeviceRGB", 8, "DCTDecode",
                    mask=mask)
     return EncodedPage({"Fg": fg}, _full_page_content(*page_size_pt, name="Fg"),
                        info={"scheme": "e3" if gray else "e3x", "gray": gray, "dpi": round(ppi, 2),
@@ -187,8 +234,8 @@ def _encode_mrc(rgb: np.ndarray, dpi: float, page_size_pt: tuple, gray: bool) ->
 
 
 @register_encoder("mrc")
-def encode_mrc(rgb, dpi, page_size_pt, jpeg_dpi=None):
-    return _encode_mrc(rgb, dpi, page_size_pt, gray=not _page_has_ink_color(rgb, dpi))
+def encode_mrc(rgb, dpi, page_size_pt, jpeg_dpi=None, qs=QualitySettings()):
+    return _encode_mrc(rgb, dpi, page_size_pt, not _page_has_ink_color(rgb, dpi), qs)
 
 
 # ----------------------------------------------------------------------------- per-page selection
@@ -246,10 +293,10 @@ def select_scheme(rgb: np.ndarray, dpi: float) -> str:
 
 
 @register_encoder("auto")
-def encode_auto(rgb, dpi, page_size_pt, jpeg_dpi=None):
+def encode_auto(rgb, dpi, page_size_pt, jpeg_dpi=None, qs=QualitySettings()):
     scheme = select_scheme(rgb, dpi)
     if scheme == "blank":
         return _blank_page(dpi)
-    if scheme == "e1":
-        return _encode_e1(rgb, dpi, page_size_pt, JPEG_PPI["jpeg"], "e1")
-    return _encode_mrc(rgb, dpi, page_size_pt, gray=scheme == "e3")
+    if scheme == "e1" or qs.full_page:
+        return _encode_e1(rgb, dpi, page_size_pt, qs.e1_ppi, "e1", qs.e1_q)
+    return _encode_mrc(rgb, dpi, page_size_pt, scheme == "e3", qs)

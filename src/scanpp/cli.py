@@ -18,7 +18,7 @@ from pathlib import Path
 
 from . import __version__, background, safety
 from .notify import notify
-from .encode import encoder_names
+from .encode import DEFAULT_QUALITY, QUALITY_MAX, QUALITY_MIN, encoder_names
 from .options import DEFAULT_BLANK_THRESHOLD, STAGES, Options
 
 log = logging.getLogger("scanpp")
@@ -33,6 +33,16 @@ def _nonneg_float(s: str) -> float:
         raise argparse.ArgumentTypeError(f"not a number: {s!r}") from None
     if not v >= 0 or v == float("inf"):
         raise argparse.ArgumentTypeError("must be a finite number >= 0")
+    return v
+
+
+def _quality(s: str) -> int:
+    try:
+        v = int(s)
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"not an integer: {s!r}") from None
+    if not QUALITY_MIN <= v <= QUALITY_MAX:
+        raise argparse.ArgumentTypeError(f"must be an integer {QUALITY_MIN}..{QUALITY_MAX}")
     return v
 
 
@@ -70,14 +80,22 @@ def build_parser() -> argparse.ArgumentParser:
                    help="do not paint over scanner edge strips / spiral coil")
     p.add_argument("--dpi", type=int, default=None,
                    help="output ppi for the jpeg/jpeg200 encoders only (default 150 / 200; never upsamples). The auto "
-                        "and mrc encoders choose their own resolutions (300 ppi mask, 100 ppi colour layer, "
-                        "150 ppi JPEG pages) and ignore it. For image files (JPEG/PNG/WebP) the default is 200")
+                        "and mrc encoders choose their own resolutions (see --quality; at the default level 5: 300 ppi "
+                        "mask, 100 ppi colour layer, 150 ppi JPEG pages) and ignore it. For image files (JPEG/PNG/WebP) the default is 200")
     p.add_argument("--jobs", type=int, default=0, help="worker processes (default: CPU count)")
     p.add_argument("--encoder", default="auto", choices=encoder_names(),
-                   help="page encoder: auto = per page: no-colour -> 300 ppi JBIG2 ink mask + 100 ppi gray layer; "
+                   help="page encoder (the numbers are those of the default --quality 5): auto = per page: no-colour -> 300 ppi JBIG2 ink mask + 100 ppi gray layer; "
                         "highlighter/ink-heavy -> 150 ppi q55 4:4:4 JPEG; otherwise ink mask + 100 ppi colour layer. "
                         "mrc = always mask + colour layer; jpeg = always 150 ppi q55 4:4:4 JPEG; "
                         "jpeg200 = same at 200 ppi (max legibility). Default: auto")
+    p.add_argument("--quality", type=_quality, default=DEFAULT_QUALITY, metavar="N",
+                   help="output image quality 1..10 (default %(default)d): higher = closer to the cleaned page, bigger files; "
+                        "lower = smaller. Controls how the cleaned page is ENCODED only; the cleaning (paper whitening, "
+                        "ink gate, deskew, blank dropping) is the same at every level (use --paper keep to keep the paper "
+                        "tint). Applies to PDF pages. An explicit --dpi still overrides the ppi of the jpeg/jpeg200 "
+                        "encoders; --encoder picks the scheme, --quality its JPEG quality and layer resolution. "
+                        "Levels 1-6 keep the 1-bit ink mask schemes; from level 7 on, pages are full-page "
+                        "baseline JPEG (4:4:4) at higher ppi/quality (level 10: near-lossless 300 ppi). See README \"Quality\"")
     p.add_argument("--backup-dir", help="where to put backups (default: .originals/ next to the input)")
     p.add_argument("--no-backup", dest="backup", action="store_false", help="do not back up the original (dangerous)")
     p.add_argument("--ocr", action="store_true",
