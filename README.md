@@ -81,10 +81,10 @@ anti-aliasing between them.
 off; duplex adds 16.6 % (18.1 s) and fold detection a further ~0.1 s CPU per page, so roughly 16-22 s depending on options and machine load. The
 simple-scan call itself returns in about 0.2-0.3 s because the work runs in the background.
 
-**Test suite.** 328 tests: unit tests on synthetic images for each stage (cleaning, geometry, blank score, duplex, folds),
+**Test suite.** 346 tests: unit tests on synthetic images for each stage (cleaning, geometry, blank score, duplex, folds, flatbed edges, quality levels),
 encoder and PDF validity tests, integration tests of the CLI, background mode and the simple-scan protocol, safety and backup
-tests, truncated-image robustness, OCR, and equivalence of the shipped code with the research prototypes. 327 pass and 1 is skipped on the
-development machine. Tests that need the private corpus skip themselves: on a fresh clone 308 pass and 20 skip.
+tests, truncated-image robustness, OCR, and equivalence of the shipped code with the research prototypes. 345 pass and 1 is skipped on the
+development machine. Tests that need the private corpus skip themselves: on a fresh clone 326 pass and 20 skip.
 
 **Not tested / known gaps:**
 
