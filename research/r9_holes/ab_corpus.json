@@ -1,0 +1,10 @@
+{
+ "set": "corpus",
+ "inputs": 66,
+ "failed": 0,
+ "identical": 66,
+ "differing": 0,
+ "pdf_differing_inputs_only_metadata": 0,
+ "inputs_with_real_page_differences": [],
+ "real_page_differences": 0
+}

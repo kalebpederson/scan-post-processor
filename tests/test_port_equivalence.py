@@ -108,10 +108,10 @@ def test_skew_and_deskew(old, img):
 
 
 def test_edges_and_blank(old, img, monkeypatch):
-    # the R4 prototype predates the flatbed edge rules (research/r7_flatbed): compare with them switched off
+    # the R4 prototype predates the flatbed edge rules (research/r7_flatbed) and the binding-hole rule (research/r9_holes): compare with them switched off
     from scanpp import boundary
     monkeypatch.setattr(boundary, "EDGE_LINE", False)
-    for k in ("FLATBED_CORNER_DOTS", "FLATBED_HAIRLINE", "FLATBED_COIL_FRINGE"):
+    for k in ("FLATBED_CORNER_DOTS", "FLATBED_HAIRLINE", "FLATBED_COIL_FRINGE", "BINDING_HOLES"):
         monkeypatch.setattr(new_geo, k, False)
     _, og = old
     m1, i1 = new_geo.edge_artifact_mask(img, 150)

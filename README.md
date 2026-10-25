@@ -23,9 +23,13 @@ The goals, as set by the author:
 Configurable: paper colour (flatten to white, the default, or keep the tint), OCR (off by default), blank-page dropping
 (on, with a threshold), deskew, duplex bleed-through suppression, fold-crease removal.
 
-Per page: decode embedded image -> paint over scanner edge strips / spiral coil -> remove fold creases -> blank-page detection (drop) ->
+Per page: decode embedded image -> paint over scanner edge strips / spiral coil / punched binding holes -> remove fold creases -> blank-page detection (drop) ->
 skew estimate -> flat-field cleaning (paper to white, ink kept, hue preserved) -> deskew -> encode the full-resolution
 cleaned page (the encoder does its own resampling, see "Encoders"). Page size (MediaBox, /Rotate) is preserved.
+Punched binding holes (a book whose binding was cut off, scanned on a sheet feeder: a column of 0.17 in discs of gray scanner backing along one
+border) are painted with paper colour when a border carries a row of at least 6 round or rectangular, uniform, backing-filled blobs of one size at a regular
+pitch (missing ones allowed); only the holes (plus 0.03 in) are painted, never printed bullets, bubbles, dot leaders or a lone circle
+([R9](research/r9_holes/REPORT.md)). Not handled: standard 3-hole punches (no example in the corpus). `--report` lists `binding_holes` per page.
 PDFs that are not plain scans (any text/fonts, not exactly one image per page, or an image with a real mask) are logged and left untouched. An image whose `/SMask` is effectively opaque (all 255, or only a border within 2 px, as written by old ImageMagick pipelines) still counts as a plain scan; the SMask is dropped.
 
 ## What it is for, and what it is not for
@@ -67,6 +71,7 @@ the figures and page crops they mention are not in the repository.
 | [R5 duplex](research/r5_duplex/REPORT.md) | Use the other side of a double-sided sheet to remove marker bleed-through | 0 false pair accepts out of 43,685 non-pairs; 138 adjacent pairs accepted corpus-wide; ~0.24 s CPU per sheet |
 | [R6 fold creases](research/r6_fold/REPORT.md) | Remove gray fold creases without touching rules, grids or text | 9/9 relevant creases on a folded test document, 0 false; 0 false detections on 1,946 of 1,951 evaluated corpus pages (the other 5 fire: 3 genuine creases on pink paper, 2 booklet edges) |
 | [R7 flatbed edges](research/r7_flatbed/REPORT.md) | Edge artefacts of flatbed scans of spiral notebooks (sheet-edge line above the lid, coil-end shadow, frame hairline, corner dots) | Four conservative paint rules; 0 content erased in the reviewed pages; pages without a firing rule are byte-identical to before |
+| [R9 binding holes](research/r9_holes/REPORT.md) | Remove the row of punched binding holes (gray scanner backing seen through them) of a cut-off book scanned on a sheet feeder | Row detector (>= 6 uniform round / rectangular blobs, regular pitch, within 0.4 in of a border); 36 of 36 pages of the user's book scans cleaned, 44 of 44 holes each; 0 firings on 66 corpus + 2,158 sample pages, those outputs byte-identical |
 | [R8 quality](research/r8_quality/REPORT.md) | The `--quality 1..10` ladder: bytes vs fidelity per level | Level 5 = the old output; level 1 is 0.65x the size, level 10 (near-lossless 300 ppi JPEG) 9.3x; 58 real pages, 11 sample PDFs |
 | [brother_live](research/brother_live/REPORT.md) | The pipeline on a live 22-page Brother ADS-2200 duplex scan | 4 blank pages dropped correctly, skew up to 3.08 deg corrected, small-print words lost 2.2-3.0 % (2.2 % by the scanner JPEG alone). Open issue: saturated highlighter / marker bleed is kept; top-edge blotches on coloured paper |
 | [acceptance](research/acceptance/REPORT.md) | Whole-corpus run, three rounds | See below |
@@ -81,9 +86,9 @@ anti-aliasing between them.
 off; duplex adds 16.6 % (18.1 s) and fold detection a further ~0.1 s CPU per page, so roughly 16-22 s depending on options and machine load. The
 simple-scan call itself returns in about 0.2-0.3 s because the work runs in the background.
 
-**Test suite.** 346 tests: unit tests on synthetic images for each stage (cleaning, geometry, blank score, duplex, folds, flatbed edges, quality levels),
+**Test suite.** 372 tests: unit tests on synthetic images for each stage (cleaning, geometry, blank score, duplex, folds, flatbed edges, binding holes, quality levels),
 encoder and PDF validity tests, integration tests of the CLI, background mode and the simple-scan protocol, safety and backup
-tests, truncated-image robustness, OCR, and equivalence of the shipped code with the research prototypes. 345 pass and 1 is skipped on the
+tests, truncated-image robustness, OCR, and equivalence of the shipped code with the research prototypes. 371 pass and 1 is skipped on the
 development machine. Tests that need the private corpus skip themselves: on a fresh clone 326 pass and 20 skip.
 
 **Not tested / known gaps:**

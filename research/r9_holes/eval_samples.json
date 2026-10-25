@@ -1,0 +1,12 @@
+{
+ "set": "samples",
+ "files": 414,
+ "pages": 2158,
+ "unreadable_pages": 219,
+ "fired_pages": 0,
+ "fired_without_pixel_change": 0,
+ "changed_without_firing": 0,
+ "max_changed_frac": 0.0,
+ "fired": [],
+ "seconds": 49.4
+}

@@ -1,0 +1,12 @@
+{
+ "set": "corpus",
+ "files": 66,
+ "pages": 66,
+ "unreadable_pages": 0,
+ "fired_pages": 0,
+ "fired_without_pixel_change": 0,
+ "changed_without_firing": 0,
+ "max_changed_frac": 0.0,
+ "fired": [],
+ "seconds": 2.6
+}

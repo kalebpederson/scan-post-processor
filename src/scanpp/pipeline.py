@@ -105,6 +105,8 @@ def process_array(rgb: np.ndarray, native_dpi: float, opts: Options, allow_drop:
         t0 = time.process_time()
         img, info, gray, wdpi = geometry._clean_edges_g(img, native_dpi, inplace=bool(img.flags.writeable))
         stats["edge_painted_frac"] = info["painted_frac"]
+        if hs := {k[-1]: v for k, v in info.items() if k.startswith("holes_")}:
+            stats["binding_holes"] = hs                   # side -> number of punched binding holes painted over
         if bs := {k[-1]: round(v, 3) for k, v in info.items() if k.startswith("boundary_")}:
             stats["paper_boundary_in"] = bs               # side -> depth (inches) of the detected paper edge
         tick("edge", t0)

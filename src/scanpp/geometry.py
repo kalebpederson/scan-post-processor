@@ -403,6 +403,11 @@ def _edge_mask_work_g(g, d, max_strip_in=0.35):
     n = _corner_dots(mask, g, pl, d)
     if n:
         info["corner_dots"] = n
+    for s in "LRTB":                                     # punched binding holes: backing seen through a row of holes
+        if "coil_" + s not in info:
+            n = _binding_holes(mask, g, s, pl, d)
+            if n:
+                info["holes_" + s] = n
     return mask, info, maxd
 
 
@@ -436,6 +441,143 @@ def _border_hairline(mask, g, side, pl, d, info) -> None:
         mo[:k + 1] |= (go[:k + 1] < pl - HAIRLINE_DROP)
         info["hairline_" + side] = k
 FLATBED_COIL_FRINGE = True
+
+
+# research switch (r9): False reproduces the previous behaviour exactly (see research/r9_holes)
+BINDING_HOLES = True
+HOLE_MIN_COUNT = 6        # holes needed in one row
+HOLE_DIAM_IN = (0.10, 0.30)       # blob size along / across the row
+HOLE_MAX_DEPTH_IN = 0.4   # centre of the row from the border (hole + rim + dilation stay inside the 0.6 in edge band)
+HOLE_PITCH_IN = (0.15, 0.6)
+HOLE_OCCUPANCY = 0.6      # share of the pitch slots between the first and last hole that must hold a hole
+HOLE_NONPAPER = 0.88      # a pixel darker than this x paper belongs to a hole
+
+
+def _binding_holes(mask: np.ndarray, g: np.ndarray, side: str, pl: float, d: float) -> int:
+    """Punched binding holes (cut-off book binding, e.g. sheet-fed scans of a bound book whose spine was removed): a row of
+    >= 6 round or rectangular blobs along one border where the scanner backing shows through.  Each hole is a detached
+    (not touching the border) non-paper blob 0.10-0.30 in across, filled (a ring of printed circles is paper inside),
+    uniform inside, surrounded by paper, centred within 0.4 in of the border; the blobs of one row share the same depth,
+    size, and a regular pitch (0.15-0.6 in, multiples allowed for missing holes, >= 60 % of the slots occupied).  Printed
+    bullets (too small), dot leaders, tally marks, hollow bubbles, a lone circle, text and graph dots never form such a row.
+    Paints each hole of the row (plus 0.03 in) into `mask` (in place); returns the number of holes painted."""
+    if not BINDING_HOLES:
+        return 0
+    go, mo = boundary._orient(g, side), boundary._orient(mask, side)
+    bw = int(round((HOLE_MAX_DEPTH_IN + 0.3) * d))
+    if go.shape[0] < bw or go.shape[1] < 3 * d:
+        return 0
+    cand = (go[:bw] < HOLE_NONPAPER * pl).astype(np.uint8)
+    if cand.sum() < HOLE_MIN_COUNT * 0.5 * (HOLE_DIAM_IN[0] * d) ** 2:
+        return 0
+    n, lab, st, cen = cv2.connectedComponentsWithStats(cand, connectivity=8)
+    lo, hi = HOLE_DIAM_IN[0] * d, HOLE_DIAM_IN[1] * d
+    def hole_ok(i) -> bool:
+        x, y, bwid, bhei, _ = st[i]
+        pad = 3
+        y0, y1, x0, x1 = max(0, y - pad), min(bw, y + bhei + pad), max(0, x - pad), min(go.shape[1], x + bwid + pad)
+        m = lab[y0:y1, x0:x1] == i
+        ring = cv2.dilate(m.astype(np.uint8), np.ones((5, 5), np.uint8)) > 0
+        ring &= ~cv2.dilate(m.astype(np.uint8), np.ones((3, 3), np.uint8)).astype(bool)
+        gg = go[y0:y1, x0:x1]
+        if ring.any() and float((gg[ring] > 0.9 * pl).mean()) < 0.85:    # holes lie in paper
+            return False
+        if x > 0 and x + bwid < go.shape[1]:                # complete blobs: an ellipse or a rectangle, not a glyph
+            mm = cv2.morphologyEx(m.astype(np.uint8), cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))) > 0   # lint / dust specks off
+            if not mm.any():
+                return False
+            yy, xx = np.nonzero(mm)
+            ew, eh = int(xx.max() - xx.min() + 1), int(yy.max() - yy.min() + 1)
+            ell = np.zeros(m.shape, np.uint8)
+            cv2.ellipse(ell, (int(xx.min()) + ew // 2, int(yy.min()) + eh // 2), (max(1, ew // 2), max(1, eh // 2)), 0, 0, 360, 1, -1)
+            iou_e = float((mm & (ell > 0)).sum()) / max(1, float((mm | (ell > 0)).sum()))
+            if iou_e < 0.80 and float(mm.sum()) < 0.93 * ew * eh:
+                return False
+        dt = cv2.distanceTransform(np.pad(m.astype(np.uint8), 1), cv2.DIST_L2, 3)[1:-1, 1:-1]
+        v = gg[dt >= 0.5 * dt.max()].astype(np.float32)
+        return v.size >= 4 and float(np.median(v)) <= 0.85 * pl and float(v.std()) <= 0.15 * pl   # filled with backing, uniform
+
+    blobs, clipped = [], []
+    for i in range(1, n):
+        x, y, bwid, bhei, area = st[i]                  # axis 1 = along the border (x), axis 0 = depth (y)
+        if y < 1:                                       # attached to the border: strip logic territory
+            continue
+        if x == 0 or x + bwid >= go.shape[1]:           # cut by the end of the page: only adopted once a row is known
+            if lo * 0.4 <= bwid <= hi and lo <= bhei <= hi and cen[i][1] <= HOLE_MAX_DEPTH_IN * d:
+                clipped.append(i)
+            continue
+        if not (lo <= bwid <= hi and lo <= bhei <= hi) or area < 0.65 * bwid * bhei or max(bwid, bhei) > 1.6 * min(bwid, bhei):
+            continue
+        if cen[i][1] > HOLE_MAX_DEPTH_IN * d:
+            continue
+        if not hole_ok(i):
+            continue
+        blobs.append((float(cen[i][0]), float(cen[i][1]), float(bwid), float(bhei), i))
+    if len(blobs) < HOLE_MIN_COUNT:
+        return 0
+    B = np.array(blobs)
+    order = np.argsort(B[:, 1])                          # cluster by depth of the centre
+    B = B[order]
+    cuts = np.nonzero(np.diff(B[:, 1]) > 0.04 * d)[0] + 1
+    painted = 0
+    for grp in np.split(B, cuts):
+        if len(grp) < HOLE_MIN_COUNT:
+            continue
+        sz = np.median(grp[:, 2:4], axis=0)
+        grp = grp[(np.abs(grp[:, 2] - sz[0]) <= 0.2 * sz[0]) & (np.abs(grp[:, 3] - sz[1]) <= 0.2 * sz[1])]
+        if len(grp) < HOLE_MIN_COUNT:
+            continue
+        grp = grp[np.argsort(grp[:, 0])]
+        diffs = np.diff(grp[:, 0])
+        dmin = np.percentile(diffs, 25)
+        p = float(np.median(diffs[diffs <= 1.2 * dmin]))
+        if not (HOLE_PITCH_IN[0] * d <= p <= HOLE_PITCH_IN[1] * d) or p < 1.2 * max(sz):
+            continue
+        q = (grp[:, 0] - grp[0, 0]) / p
+        keep = np.abs(q - np.round(q)) <= 0.15
+        if keep.sum() < HOLE_MIN_COUNT:
+            continue
+        grp = grp[keep]
+        slots = int(round((grp[-1, 0] - grp[0, 0]) / p)) + 1
+        if len(grp) < HOLE_OCCUPANCY * slots:
+            continue
+        k = max(3, int(round(0.03 * d)) * 2 + 1)
+        ids = [int(b[4]) for b in grp]
+        depth = float(np.median(grp[:, 1]))
+        ids += [i for i in clipped if abs(cen[i][1] - depth) <= 0.04 * d and abs(st[i][3] - sz[1]) <= 0.2 * sz[1] and hole_ok(i)]
+        el = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k))
+        for i in ids:
+            x, y, bwid, bhei, _ = st[i]
+            y0, y1, x0, x1 = max(0, y - k), min(bw, y + bhei + k), max(0, x - k), min(go.shape[1], x + bwid + k)
+            mo[y0:y1, x0:x1] |= cv2.dilate((lab[y0:y1, x0:x1] == i).astype(np.uint8), el) > 0
+        # a hole fused with a mark touching it (pen stroke, lint) fails the shape test: at an empty slot of the row take only the
+        # round part (opening with a disc of 0.8 x the hole size), never the mark
+        done = set(ids)
+        disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (max(3, int(0.8 * min(sz))) | 1,) * 2)
+        for i in range(1, n):
+            x, y, bwid, bhei, area = st[i]
+            if i in done or y < 1 or x == 0 or x + bwid >= go.shape[1] or area < 0.5 * sz[0] * sz[1] or max(bwid, bhei) > 4.0 * max(sz):
+                continue
+            y0, y1, x0, x1 = max(0, y - k), min(bw, y + bhei + k), max(0, x - k), min(go.shape[1], x + bwid + k)
+            comp = (lab[y0:y1, x0:x1] == i).astype(np.uint8)
+            mm = cv2.morphologyEx(comp, cv2.MORPH_OPEN, disc)
+            if not mm.any():
+                continue
+            yy, xx = np.nonzero(mm)
+            ew, eh = int(xx.max() - xx.min() + 1), int(yy.max() - yy.min() + 1)
+            if abs(ew - sz[0]) > 0.25 * sz[0] or abs(eh - sz[1]) > 0.25 * sz[1] or float(mm.sum()) < 0.65 * ew * eh:
+                continue
+            ca, cd = (xx.min() + xx.max()) / 2 + x0, (yy.min() + yy.max()) / 2 + y0      # centre of the round part
+            if abs(cd - depth) > 0.15 * max(sz) + 0.04 * d or abs((ca - grp[0, 0]) / p - round((ca - grp[0, 0]) / p)) > 0.35:
+                continue
+            dt = cv2.distanceTransform(np.pad(mm, 1), cv2.DIST_L2, 3)[1:-1, 1:-1]
+            v = go[y0:y1, x0:x1][dt >= 0.5 * dt.max()].astype(np.float32)
+            if float(np.median(v)) > 0.85 * pl or float(v.std()) > 0.15 * pl:
+                continue
+            mo[y0:y1, x0:x1] |= cv2.dilate(mm, el) > 0
+            ids.append(i)
+        painted += len(ids)
+    return painted
 
 
 def _corner_dots(mask: np.ndarray, g: np.ndarray, pl: float, d: float) -> int:

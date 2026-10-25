@@ -1,0 +1,10 @@
+{
+ "set": "samples",
+ "inputs": 414,
+ "failed": 30,
+ "identical": 103,
+ "differing": 281,
+ "pdf_differing_inputs_only_metadata": 281,
+ "inputs_with_real_page_differences": [],
+ "real_page_differences": 0
+}
